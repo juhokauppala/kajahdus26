@@ -1,0 +1,181 @@
+<html><head> <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Kajahdus</title></head><body class="body"><div class="container flex-v flex--centering"><div class="titlebar"><h1 style="color: var(--primary);">Kajahdus</h1></div><div id="days-until"></div><div class="menu-toggle"><picture><source type="image/webp" srcset="/OlLtdOjhkq-512.webp 512w"><img src="/OlLtdOjhkq-512.jpeg" alt="Menu Icon" style="width: 100%; height: 100%; object-fit: contain; filter: invert(0.8);" width="512" height="512"></picture></div><div style="padding: 0 0.8em; width: 100%; box-sizing: border-box;"><p>Description
+Types of positioning
+
+    A positioned element is an element whose computed position value is either relative, absolute, fixed, or sticky. (In other words, it's anything except static.)
+    A relatively positioned element is an element whose computed position value is relative. The top and bottom properties specify the vertical offset from its normal position; the left and right properties specify the horizontal offset.
+    An absolutely positioned element is an element whose computed position value is absolute or fixed. The top, right, bottom, and left properties specify offsets from the edges of the element's containing block. (The containing block is the ancestor relative to which the element is positioned.) If the element has margins, they are added to the offset. The element establishes a new block formatting context (BFC) for its contents.
+    A stickily positioned element is an element whose computed position value is sticky. It's treated as relatively positioned until its containing block crosses a specified threshold (such as setting top to value other than auto) within its flow root (or the container it scrolls within), at which point it is treated as "stuck" until meeting the opposite edge of its containing block.
+
+Most of the time, absolutely positioned elements that have height and width set to auto are sized so as to fit their contents. However, non-replaced, absolutely positioned elements can be made to fill the available vertical space by specifying both top and bottom and leaving height unspecified (that is, auto). They can likewise be made to fill the available horizontal space by specifying both left and right and leaving width as auto.
+
+Except for the case just described (of absolutely positioned elements filling the available space):
+
+    If both top and bottom are specified (technically, not auto), top wins.
+    If both left and right are specified, left wins when direction is ltr (English, horizontal Japanese, etc.) and right wins when direction is rtl (Persian, Arabic, Hebrew, etc.).
+
+Accessibility
+
+Ensure that elements positioned with an absolute or fixed value do not obscure other content when the page is zoomed to increase text size.
+
+    MDN Understanding WCAG, Guideline 1.4 explanations
+    Visual Presentation: Understanding SC 1.4.8 | Understanding WCAG 2.0
+
+Performance & Accessibility
+
+Scrolling elements containing fixed or sticky content can cause performance and accessibility issues. As a user scrolls, the browser must repaint the sticky or fixed content in a new location. Depending on the content needing to be repainted, the browser performance, and the device's processing speed, the browser may not be able to manage repaints at 60 fps. Such a scenario can lead to jank and, more importantly, accessibility concerns for people with sensitivities. One solution is to add will-change: transform to the positioned elements to render the element in its own layer, improving repaint speed and therefore improving performance and accessibility.</p></div></div><style>:root {
+    --primary: #dededeff;
+    --secondary: #171717ff;
+    --accent: #6b0707ff;
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: var(--accent);
+    border: 1px solid var(--secondary);
+    border-radius: 0.3em;
+    box-sizing: border-box;
+    box-shadow: 0 0 1em 0.3em rgba(27, 27, 27, 0.5);
+    padding: 0.3em;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.titlebar {
+    width: 100%;
+    padding: 0.5em 1em;
+    background-color: var(--accent);
+    box-sizing: border-box;
+    line-height: initial;
+}
+
+.body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary);
+    min-height: 1vh;
+}
+
+.container {
+    margin: 0;
+    padding: 0 0 1em;
+    max-width: 100%;
+    width: 40em;
+    position: relative;
+}
+
+.debug-box {
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.container h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .font--header {
+    font-family: Header, serif;
+    color: var(--secondary);
+}
+
+p, span, div, a, .font--body {
+    font-family: Body, sans-serif;
+    color: var(--secondary);
+    line-height: 140%;
+}
+
+.flex-h {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.flex-v {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
+}
+
+.centered {
+    align-self: center;
+}
+
+.flex--centering {
+    align-items: center;
+}
+
+.rounded {
+    mask-image: radial-gradient(closest-side, rgba(0,0,0,1) 60%, 90%, rgba(0,0,0,0) 100%)
+}
+
+.sticky {
+    position: sticky;
+    top: 0.2em;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+@font-face {
+    font-family: Header;
+    src: url("/OugkehRegular-DYYrW.otf");
+}
+@font-face {
+    font-family: Body;
+    src: url("/Merriweather-VariableFont_opsz,wdth,wght.ttf");
+}
+
+@media screen and (max-width: 479px) {
+    .container {
+        width: 100%;
+    }
+    .container h1 {
+        font-size: 2.5em;
+    }
+}
+</style><script>document.addEventListener("DOMContentLoaded", (event) => {
+    const activeNavItem = document.querySelector(`.nav-item[href="${document.location.pathname.slice(0,-1)}"]`);
+    if (activeNavItem) activeNavItem.classList.add("nav-item--active");
+});
+</script><script>const SECONDS = 1000
+const MINUTES = SECONDS * 60
+const HOURS = MINUTES * 60
+const DAYS = HOURS * 24
+
+const target = "2026-11-06T17:00:00+0200";
+const targetDate = new Date(target);
+const dayCounterEl = document.getElementById("days-until")
+
+const updateCounter = () => {
+    const now = new Date();
+    const diffTime = targetDate - now;
+    const diffDays = Math.floor(diffTime / DAYS);
+    const diffHours = Math.floor((diffTime % DAYS) / HOURS);
+    const diffMinutes = Math.floor((diffTime % HOURS) / MINUTES);
+    const diffSeconds = Math.floor((diffTime % MINUTES) / SECONDS);
+
+    const dayPart = diffDays > 0 ? `${diffDays} päivää ` : '';
+
+    dayCounterEl.innerHTML = `${dayPart}${diffHours.toString().padStart(2, '0')}:${diffMinutes.toString().padStart(2, '0')}:${diffSeconds.toString().padStart(2, '0')}`;
+}
+
+setInterval(updateCounter, 1000);
+updateCounter();
+</script><style>#days-until {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background-color: var(--secondary);
+    color: var(--primary);
+}</style></body></html>

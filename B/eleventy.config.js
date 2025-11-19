@@ -7,5 +7,4 @@ export default function (eleventyConfig) {
     eleventyConfig.addWatchTarget("_includes/*.pug");
     eleventyConfig.addPassthroughCopy("Merriweather-VariableFont_opsz,wdth,wght.ttf")
     eleventyConfig.addPassthroughCopy("OugkehRegular-DYYrW.otf")
-    eleventyConfig.addPassthroughCopy("j.webp")
 };

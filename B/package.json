@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "eleventy.config.js",
   "scripts": {
-    "serve": "eleventy --serve"
+    "serve": "eleventy --serve",
+    "build": "eleventy"
   },
   "keywords": [],
   "author": "",
