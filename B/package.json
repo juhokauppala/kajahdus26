@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "eleventy.config.js",
   "scripts": {
-    "serve": "eleventy --serve",
-    "build": "eleventy"
+    "serve": "eleventy --output=site --serve",
+    "build": "eleventy --output=site"
   },
   "keywords": [],
   "author": "",
