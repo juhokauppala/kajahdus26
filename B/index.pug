@@ -35,13 +35,16 @@ layout: layout.pug
 
 
 style.
+    :root {
+        --right-side: 70px;
+    }
     .page {
         position: relative;
         background-color: var(--accent);
     }
 
     .page .content {
-        width: 81.2%;
+        width: calc(100% - var(--right-side));
         margin: 0 0;
         padding: 0.5em 1.3em;
         background-color: var(--primary);
@@ -52,15 +55,14 @@ style.
         position: absolute;
         top: -30px;
         right: -40px;
-        width: 50%;
+        width: calc(var(--right-side) + 40px + 110px);
         height: 100%;
         box-sizing: border-box;
     }
 
     .graphic {
         position: sticky;
-        top: 0;
-        right: 0;
+        top: 60px;
         width: 100%;
         height: auto;
         z-index: 2000;

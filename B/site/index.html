@@ -22,13 +22,16 @@ Ensure that elements positioned with an absolute or fixed value do not obscure o
 
 Performance & Accessibility
 
-Scrolling elements containing fixed or sticky content can cause performance and accessibility issues. As a user scrolls, the browser must repaint the sticky or fixed content in a new location. Depending on the content needing to be repainted, the browser performance, and the device's processing speed, the browser may not be able to manage repaints at 60 fps. Such a scenario can lead to jank and, more importantly, accessibility concerns for people with sensitivities. One solution is to add will-change: transform to the positioned elements to render the element in its own layer, improving repaint speed and therefore improving performance and accessibility.</p></div><div class="right-side"><picture><source type="image/webp" srcset="/B/site/AYBbPIFywR-595.webp 595w"><img class="graphic" src="/B/site/AYBbPIFywR-595.jpeg" alt="Villimies ja Norppa" width="595" height="842"></picture></div></div><style>.page {
+Scrolling elements containing fixed or sticky content can cause performance and accessibility issues. As a user scrolls, the browser must repaint the sticky or fixed content in a new location. Depending on the content needing to be repainted, the browser performance, and the device's processing speed, the browser may not be able to manage repaints at 60 fps. Such a scenario can lead to jank and, more importantly, accessibility concerns for people with sensitivities. One solution is to add will-change: transform to the positioned elements to render the element in its own layer, improving repaint speed and therefore improving performance and accessibility.</p></div><div class="right-side"><picture><source type="image/webp" srcset="/B/site/AYBbPIFywR-595.webp 595w"><img class="graphic" src="/B/site/AYBbPIFywR-595.jpeg" alt="Villimies ja Norppa" width="595" height="842"></picture></div></div><style>:root {
+    --right-side: 70px;
+}
+.page {
     position: relative;
     background-color: var(--accent);
 }
 
 .page .content {
-    width: 81.2%;
+    width: calc(100% - var(--right-side));
     margin: 0 0;
     padding: 0.5em 1.3em;
     background-color: var(--primary);
@@ -39,15 +42,14 @@ Scrolling elements containing fixed or sticky content can cause performance and 
     position: absolute;
     top: -30px;
     right: -40px;
-    width: 50%;
+    width: calc(var(--right-side) + 40px + 110px);
     height: 100%;
     box-sizing: border-box;
 }
 
 .graphic {
     position: sticky;
-    top: 0;
-    right: 0;
+    top: 60px;
     width: 100%;
     height: auto;
     z-index: 2000;
@@ -107,6 +109,9 @@ Scrolling elements containing fixed or sticky content can cause performance and 
     margin: 0;
     max-width: 100%;
     width: 40em;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
 }
 
 .debug-box {
