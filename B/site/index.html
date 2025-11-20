@@ -71,7 +71,7 @@ Scrolling elements containing fixed or sticky content can cause performance and 
 .menu-toggle {
     position: fixed;
     top: 1em;
-    right: 1em;
+    right: calc(50% - 18em);
     width: 2.5em;
     height: 2.5em;
     background-color: var(--accent);
@@ -112,6 +112,7 @@ Scrolling elements containing fixed or sticky content can cause performance and 
     overflow-x: hidden;
     overflow-y: auto;
     height: 100vh;
+    position: relative;
 }
 
 .debug-box {
@@ -182,6 +183,10 @@ p, span, div, a, .font--body {
     }
     .container h1 {
         font-size: 2.5em;
+    }
+
+    .menu-toggle {
+        right: 1em;
     }
 }
 </style><script>document.addEventListener("DOMContentLoaded", (event) => {
