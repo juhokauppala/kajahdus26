@@ -4,7 +4,7 @@
   "main": "eleventy.config.js",
   "scripts": {
     "serve": "eleventy --output=site --serve",
-    "build": "eleventy --output=site"
+    "build": "eleventy --output=site --pathprefix=B/site"
   },
   "keywords": [],
   "author": "",
