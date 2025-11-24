@@ -1,8 +1,9 @@
 ---
 pages: 
-    Työelämä: /tyoelama
-    Musiikki: /musiikki
-    Lätkäveikkaus: /latkaveikkaus
+    Etusivu: /
+    Osallistujalle: /participant
+    Yleisölle: /audience
+    Kumppanille: /partner
 ---
 
 html
@@ -13,25 +14,74 @@ html
         //- link(rel="icon", href="/j.webp")
     body.body
         .container.flex-v.flex--centering
-            .titlebar
+            a.titlebar(href="/")
                 h1(style="color: var(--primary);") Kajahdus 2026
             #days-until
 
             .menu-toggle
                 img(src="ham.png", alt="Menu Icon", style="width: 100%; height: 100%; object-fit: contain; filter: invert(0.8);")
 
-            div !{content}
+            div(style="flex-grow: 1;") !{content}
 
             .footer Nähdään pian!
 
-            
-            
+            .menu-content
+                .backdrop
+                .menu
+                    ul
+                        each url, page in pages
+                            li: a(href=url) #{page}
 
         style.
             :root {
                 --primary: #dededeff;
                 --secondary: #171717ff;
                 --accent: #6b0707ff;
+            }
+
+            .menu {
+                background-color: var(--primary);
+                box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+                padding: 2em;
+                box-sizing: border-box;
+            }
+
+            .menu ul {
+                list-style-type: "⇒ ";
+            }
+
+            .menu li a {
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+                padding-left: 0.5em;
+                display: block;
+            }
+
+            .menu li a:hover {
+                background-color: var(--accent);
+                color: var(--primary);
+            }
+
+            .menu-content {
+                display: none;
+                position: fixed;
+                top: 5em;
+                z-index: 3000;
+                min-width: 20em;
+            }
+
+            .menu-content.active {
+                display: block;
+            }
+
+            .backdrop {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background-color: rgba(0,0,0,0.5);
             }
 
             .footer {
@@ -41,6 +91,8 @@ html
                 box-sizing: border-box;
                 text-align: center;
                 color: var(--primary);
+                position: sticky;
+                top: 100vh;
             }
 
             .menu-toggle {
@@ -56,7 +108,7 @@ html
                 box-shadow: 0 0 1em 0.3em rgba(27, 27, 27, 0.5);
                 padding: 0.3em;
                 cursor: pointer;
-                z-index: 1000;
+                z-index: 3000;
             }
 
             .titlebar {
@@ -65,6 +117,7 @@ html
                 background-color: var(--accent);
                 box-sizing: border-box;
                 line-height: initial;
+                text-decoration: none;
             }
             .titlebar h1 {
                 text-align: center;
@@ -166,10 +219,16 @@ html
             }
             
         script.
-            document.addEventListener("DOMContentLoaded", (event) => {
-                const activeNavItem = document.querySelector(`.nav-item[href="${document.location.pathname.slice(0,-1)}"]`);
-                if (activeNavItem) activeNavItem.classList.add("nav-item--active");
-            });
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menuContent = document.querySelector('.menu-content');
+            const backdrop = document.querySelector('.backdrop');
+
+            const toggleMenu = () => {
+                menuContent.classList.toggle('active');
+            }
+
+            menuToggle.addEventListener('click', toggleMenu);
+            backdrop.addEventListener('click', toggleMenu);
 
         script.
             const SECONDS = 1000
