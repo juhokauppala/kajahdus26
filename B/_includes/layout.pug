@@ -1,9 +1,9 @@
 ---
 pages: 
-    Etusivu: index
-    Osallistujalle: participant
-    Yleisölle: audience
-    Kumppanille: partner
+    Etusivu: /
+    Osallistujalle: /participant
+    Yleisölle: /audience
+    Kumppanille: /partner
 ---
 
 html
@@ -14,7 +14,7 @@ html
         //- link(rel="icon", href="/j.webp")
     body.body
         .container.flex-v.flex--centering
-            a.titlebar(href="#")
+            a.titlebar(href="index")
                 h1(style="color: var(--primary);") Kajahdus 2026
             #days-until
 
