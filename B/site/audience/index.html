@@ -11,6 +11,7 @@ Otathan somekanavamme seurantaan niin saat viimeisimmät päivitykset tapahtumas
     --primary: #dededeff;
     --secondary: #171717ff;
     --accent: #6b0707ff;
+    --width-container: 50em;
 }
 
 .menu {
@@ -72,7 +73,7 @@ Otathan somekanavamme seurantaan niin saat viimeisimmät päivitykset tapahtumas
 .menu-toggle {
     position: fixed;
     top: 1em;
-    right: calc(50% - 18em);
+    right: calc(50vw - (var(--width-container) / 2) + 1em);
     width: 2.5em;
     height: 2.5em;
     background-color: var(--accent);
@@ -103,18 +104,19 @@ Otathan somekanavamme seurantaan niin saat viimeisimmät päivitykset tapahtumas
     align-items: center;
     margin: 0;
     padding: 0;
-    background-color: var(--primary);
+    background-color: rgba(36, 36, 36, 1);
     min-height: 1vh;
 }
 
 .container {
     margin: 0;
     max-width: 100%;
-    width: 40em;
+    width: 50em;
     overflow-x: hidden;
     overflow-y: auto;
     height: 100vh;
     position: relative;
+    box-shadow: 0 0 2em 1em var(--accent);
 }
 
 .debug-box {
