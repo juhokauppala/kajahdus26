@@ -1,110 +1,168 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
 	Solid State by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Kajahdus</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+  <head>
+    <title>Kajahdus</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <h1><a href="index.html">Kajahdus</a></h1>
+        <nav>
+          <a href="#menu">Valikko</a>
+        </nav>
+      </header>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+      <!-- Menu -->
+      <nav id="menu">
+        <div class="inner">
+          <img
+            src="images/logo.png"
+            alt=""
+            height="150"
+            style="border-radius: 50%"
+          />
+          <ul class="links">
+            <li><a href="index.html">Etusivu</a></li>
+            <li><a href="participant.html">Osallistujalle</a></li>
+            <li><a href="audience.html">Yleisölle</a></li>
+            <li><a href="partner.html">Yhteistyökumppanille</a></li>
+          </ul>
+          <a href="#" class="close">Sulje</a>
+        </div>
+      </nav>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Kajahdus</a></h1>
-						<nav>
-							<a href="#menu">Valikko</a>
-						</nav>
-					</header>
+      <!-- Banner -->
+      <section id="banner">
+        <div class="inner">
+          <div class="logo">
+            <img
+              src="images/logo.png"
+              alt=""
+              height="150"
+              style="border-radius: 50%"
+            />
+          </div>
+          <h2>Kajahdus</h2>
+          <h2 id="days-until"></h2>
+          <span style="filter: brightness(0.5); font-size: 0.8em"
+            ><a
+              href="https://www.instagram.com/pepperii/"
+              target="_blank"
+              rel="external noopener"
+            >
+              Taustakuva Pölähdys-konsertista 2024: Petri Leppävuori
+              <img src="images/ig.webp" alt="Instagram" height="16" /> @pepperii
+            </a>
+          </span>
+        </div>
+        <script>
+          const SECONDS = 1000;
+          const MINUTES = SECONDS * 60;
+          const HOURS = MINUTES * 60;
+          const DAYS = HOURS * 24;
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<img src="images/logo.png" alt="" height="150" style="border-radius: 50%;">
-							<ul class="links">
-								<li><a href="index.html">Etusivu</a></li>
-								<li><a href="participant.html">Osallistujalle</a></li>
-								<li><a href="audience.html">Yleisölle</a></li>
-								<li><a href="partner.html">Yhteistyökumppanille</a></li>
-							</ul>
-							<a href="#" class="close">Sulje</a>
-						</div>
-					</nav>
+          const target = "2026-11-06T17:00:00+0200";
+          const targetDate = new Date(target);
+          const dayCounterEl = document.getElementById("days-until");
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo">
-								<img src="images/logo.png" alt="" height="150" style="border-radius: 50%;">
-							</div>
-							<h2>Kajahdus</h2>
-							<h2 id="days-until"></h2>
-						</div>
-						<script>
-							const SECONDS = 1000
-							const MINUTES = SECONDS * 60
-							const HOURS = MINUTES * 60
-							const DAYS = HOURS * 24
+          const intervalId = setInterval(() => {
+            const now = new Date();
+            const diffTime = targetDate - now;
+            const diffDays = Math.floor(diffTime / DAYS);
+            const diffHours = Math.floor((diffTime % DAYS) / HOURS);
+            const diffMinutes = Math.floor((diffTime % HOURS) / MINUTES);
+            const diffSeconds = Math.floor((diffTime % MINUTES) / SECONDS);
 
-							const target = "2026-11-06T17:00:00+0200";
-							const targetDate = new Date(target);
-							const dayCounterEl = document.getElementById("days-until")
+            const dayPart = diffDays > 0 ? `${diffDays} päivää <br>` : "";
 
-							const intervalId = setInterval(() => {
-								const now = new Date();
-								const diffTime = targetDate - now;
-								const diffDays = Math.floor(diffTime / DAYS);
-								const diffHours = Math.floor((diffTime % DAYS) / HOURS);
-								const diffMinutes = Math.floor((diffTime % HOURS) / MINUTES);
-								const diffSeconds = Math.floor((diffTime % MINUTES) / SECONDS);
+            dayCounterEl.innerHTML = `${dayPart}${diffHours
+              .toString()
+              .padStart(2, "0")}:${diffMinutes
+              .toString()
+              .padStart(2, "0")}:${diffSeconds.toString().padStart(2, "0")}`;
+          }, 1000); // Update every second
+        </script>
+      </section>
 
-								const dayPart = diffDays > 0 ? `${diffDays} päivää <br>` : '';
+      <!-- Wrapper -->
+      <section id="wrapper">
+        <!-- One -->
+        <section id="one" class="wrapper spotlight style1">
+          <div class="inner">
+            <a href="#" class="image"
+              ><img
+                src="images/logo.png"
+                alt=""
+                style="filter: brightness(0.8)"
+            /></a>
+            <div class="content">
+              <h2 class="major">Save the Date!</h2>
+              <p>
+                Suomen teekkarikuorot kokoontuvat Lappeenrantaan ensimmäistä
+                kertaa.<br />Tule kokemaan kuinka karjalasta kajahtaa
+                6.-8.11.2026!
+              </p>
+              <a href="participant.html" class="special">Osallistujalle</a>
+              <a href="audience.html" class="special">Yleisölle</a>
+              <a href="partner.html" class="special">Yhteistyökumppanille</a>
+            </div>
+          </div>
+        </section>
 
-								dayCounterEl.innerHTML = `${dayPart}${diffHours.toString().padStart(2, '0')}:${diffMinutes.toString().padStart(2, '0')}:${diffSeconds.toString().padStart(2, '0')}`;
-							}, 1000); // Update every second
-						</script>
-					</section>
+        <!-- Two -->
+        <section id="two" class="wrapper alt spotlight style2">
+          <div class="inner">
+            <a href="#" class="image"
+              ><img
+                src="images/logo.png"
+                style="filter: brightness(0.8)"
+                alt=""
+            /></a>
+            <div class="content">
+              <h2 class="major">#kajahdus26</h2>
+              <p>
+                Laita somekanavamme seurantaan niin saat viimeisimmät
+                päivitykset tapahtumasta!
+              </p>
+              <a href="https://www.instagram.com/kajahdus26/" class="special"
+                >Instagram
+                <img
+                  src="images/ig.webp"
+                  alt="Instagram"
+                  height="24"
+                  style="margin-bottom: -6px"
+              /></a>
+              <a href="https://www.tiktok.com/@kajahdus26" class="special"
+                >TikTok
+                <img
+                  src="images/tik-tok-logo_578229-290.jpg"
+                  alt="TikTok"
+                  height="24"
+                  style="margin-bottom: -6px; border-radius: 50%"
+              /></a>
+            </div>
+          </div>
+        </section>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
-
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/logo.png" alt="" style="filter: brightness(0.8);" /></a>
-									<div class="content">
-										<h2 class="major">Save the Date!</h2>
-										<p>Suomen teekkarikuorot kokoontuvat Lappeenrantaan ensimmäistä kertaa.<br>Tule kokemaan kuinka karjalasta kajahtaa 6.-8.11.2026!</p>
-										<a href="participant.html" class="special">Osallistujalle</a>
-										<a href="audience.html" class="special">Yleisölle</a>
-										<a href="partner.html" class="special">Yhteistyökumppanille</a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/logo.png" style="filter: brightness(0.8);" alt="" /></a>
-									<div class="content">
-										<h2 class="major">#kajahdus26</h2>
-										<p>Laita somekanavamme seurantaan niin saat viimeisimmät päivitykset tapahtumasta!</p>
-										<a href="https://www.instagram.com/kajahdus26/" class="special">Instagram <img src="images/ig.webp" alt="Instagram" height="24" style="margin-bottom: -6px;" /></a>
-										<a href="https://www.tiktok.com/@kajahdus26" class="special">TikTok <img src="images/tik-tok-logo_578229-290.jpg" alt="TikTok" height="24" style="margin-bottom: -6px; border-radius: 50%;" /></a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Three -->
-							<!-- <section id="three" class="wrapper spotlight style3">
+        <!-- Three -->
+        <!-- <section id="three" class="wrapper spotlight style3">
 								<div class="inner">
 									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
 									<div class="content">
@@ -115,8 +173,8 @@
 								</div>
 							</section> -->
 
-						<!-- Four -->
-							<!-- <section id="four" class="wrapper alt style1">
+        <!-- Four -->
+        <!-- <section id="four" class="wrapper alt style1">
 								<div class="inner">
 									<h2 class="major">Vitae phasellus</h2>
 									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
@@ -151,13 +209,12 @@
 									</ul>
 								</div>
 							</section> -->
+      </section>
 
-					</section>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<!-- <h2 class="major">Get in touch</h2>
+      <!-- Footer -->
+      <section id="footer">
+        <div class="inner">
+          <!-- <h2 class="major">Get in touch</h2>
 							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
 							<form method="post" action="#">
 								<div class="fields">
@@ -178,7 +235,7 @@
 									<li><input type="submit" value="Send Message" /></li>
 								</ul>
 							</form> -->
-							<!-- <ul class="contact">
+          <!-- <ul class="contact">
 								<li class="icon solid fa-home">
 									Untitled Inc<br />
 									1234 Somewhere Road Suite #2894<br />
@@ -190,21 +247,19 @@
 								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
 								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
 							</ul> -->
-							<ul class="copyright">
-								<!-- <li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
-							</ul>
-						</div>
-					</section>
+          <ul class="copyright">
+            <!-- <li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
+          </ul>
+        </div>
+      </section>
+    </div>
 
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
