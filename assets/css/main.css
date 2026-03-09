@@ -93,8 +93,8 @@ html {
 }
 
 body {
-  background-color: hsl(0, 30%, 23%);
-  background-image: linear-gradient(to top, hsla(0, 30%, 23%, 0.8), hsla(0, 30%, 23%, 0.8)), url("../../images/bg.jpg");
+  background-color: hsl(0, 40%, 23%);
+  background-image: linear-gradient(to top, hsla(0, 40%, 23%, 0.8), hsla(0, 40%, 23%, 0.8)), url("../../images/bg.jpg");
   background-size: auto, cover;
   background-attachment: fixed, fixed;
   background-position: center, center;
@@ -1752,7 +1752,7 @@ select {
 }
 select option {
   color: #ffffff;
-  background: hsl(0, 30%, 23%);
+  background: hsl(0, 40%, 23%);
 }
 select:focus::-ms-value {
   background-color: transparent;
@@ -1837,7 +1837,7 @@ input[type=radio]:checked + label:before {
   background: #ffffff;
   border-color: #ffffff;
   content: "\f00c";
-  color: hsl(0, 30%, 23%);
+  color: hsl(0, 40%, 23%);
 }
 input[type=checkbox]:focus + label:before,
 input[type=radio]:focus + label:before {
@@ -2429,7 +2429,7 @@ button:disabled,
 }
 .features article {
   padding: 1.75em 1.75em 0.1em 1.75em;
-  background-color: hsl(0, 28.5%, 26%);
+  background-color: hsl(0, 38.5%, 26%);
   border-radius: 5px;
   margin: 1.5em 3em 1.5em 0;
   width: calc(50% - 1.5em);
@@ -2485,7 +2485,7 @@ button:disabled,
   -webkit-transition: background-color 0.2s ease-in-out;
   -ms-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
-  background-color: hsla(0, 28.5%, 26%, 0.95);
+  background-color: hsla(0, 38.5%, 26%, 0.95);
   height: 3.5em;
   left: 0;
   line-height: 3.5em;
@@ -2645,7 +2645,7 @@ button:disabled,
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background: hsla(0, 30%, 23%, 0.8);
+  background: hsla(0, 40%, 23%, 0.8);
   cursor: default;
   height: 100%;
   left: 0;
@@ -2831,8 +2831,8 @@ body.is-menu-visible #menu .inner {
 @media screen and (max-width: 1280px) {
   #banner {
     padding: 7em 0 8.25em 0;
-    background-color: hsl(0, 30%, 23%);
-    background-image: linear-gradient(to top, hsla(0, 30%, 23%, 0.8), hsla(0, 30%, 23%, 0.8)), url("../../images/bg.jpg");
+    background-color: hsl(0, 40%, 23%);
+    background-image: linear-gradient(to top, hsla(0, 40%, 23%, 0.8), hsla(0, 40%, 23%, 0.8)), url("../../images/bg.jpg");
     background-size: auto, cover;
     background-position: center, center;
     margin-bottom: -6.5em;
@@ -2920,8 +2920,8 @@ body.is-preload #banner p {
 @media screen and (max-width: 1280px) {
   #wrapper > header {
     padding: 9em 0 6.25em 0;
-    background-color: hsl(0, 30%, 23%);
-    background-image: linear-gradient(to top, hsla(0, 30%, 23%, 0.8), hsla(0, 30%, 23%, 0.8)), url("../../images/bg.jpg");
+    background-color: hsl(0, 40%, 23%);
+    background-image: linear-gradient(to top, hsla(0, 40%, 23%, 0.8), hsla(0, 40%, 23%, 0.8)), url("../../images/bg.jpg");
     background-size: auto, cover;
     background-position: center, 0% 30%;
     margin-bottom: -6.5em;
@@ -2953,18 +2953,18 @@ body.is-preload #banner p {
 }
 
 .wrapper {
-  background-color: hsl(0, 30%, 23%);
+  background-color: hsl(0, 40%, 23%);
   margin: 6.5em 0;
   position: relative;
 }
 .wrapper:before, .wrapper:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 30%25, 23%25)%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 40%25, 23%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper:before {
-  box-shadow: inset 0 -1px 0 0 hsl(0, 30%, 23%), 0 1px 0 0 hsl(0, 30%, 23%);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 40%, 23%), 0 1px 0 0 hsl(0, 40%, 23%);
 }
 .wrapper:after {
-  box-shadow: inset 0 -1px 0 0 hsl(0, 30%, 23%), 0 1px 0 0 hsl(0, 30%, 23%);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 40%, 23%), 0 1px 0 0 hsl(0, 40%, 23%);
 }
 .wrapper:before, .wrapper:after {
   background-repeat: no-repeat;
@@ -3005,64 +3005,64 @@ body.is-preload #banner p {
   width: 55em;
 }
 .wrapper.style2 {
-  background-color: hsl(0, 28.5%, 26%);
+  background-color: hsl(0, 38.5%, 26%);
 }
 .wrapper.style2:before, .wrapper.style2:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 28.5%25, 26%25)%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 38.5%25, 26%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper.style2:before {
-  box-shadow: inset 0 -1px 0 0 hsl(0, 28.5%, 26%), 0 1px 0 0 hsl(0, 28.5%, 26%);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 38.5%, 26%), 0 1px 0 0 hsl(0, 38.5%, 26%);
 }
 .wrapper.style2:after {
-  box-shadow: inset 0 -1px 0 0 hsl(0, 28.5%, 26%), 0 1px 0 0 hsl(0, 28.5%, 26%);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 38.5%, 26%), 0 1px 0 0 hsl(0, 38.5%, 26%);
 }
 .wrapper.style3 {
-  background-color: hsl(0, 27%, 29%);
+  background-color: hsl(0, 37%, 29%);
 }
 .wrapper.style3:before, .wrapper.style3:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 27%25, 29%25)%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 37%25, 29%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper.style3:before {
-  box-shadow: inset 0 -1px 0 0 hsl(0, 27%, 29%), 0 1px 0 0 hsl(0, 27%, 29%);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 37%, 29%), 0 1px 0 0 hsl(0, 37%, 29%);
 }
 .wrapper.style3:after {
-  box-shadow: inset 0 -1px 0 0 hsl(0, 27%, 29%), 0 1px 0 0 hsl(0, 27%, 29%);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 37%, 29%), 0 1px 0 0 hsl(0, 37%, 29%);
 }
 .wrapper.style4 {
-  background-color: hsl(0, 25.5%, 32%);
+  background-color: hsl(0, 35.5%, 32%);
 }
 .wrapper.style4:before, .wrapper.style4:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 25.5%25, 32%25)%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 35.5%25, 32%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper.style4:before {
-  box-shadow: inset 0 -1px 0 0 hsl(0, 25.5%, 32%), 0 1px 0 0 hsl(0, 25.5%, 32%);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 35.5%, 32%), 0 1px 0 0 hsl(0, 35.5%, 32%);
 }
 .wrapper.style4:after {
-  box-shadow: inset 0 -1px 0 0 hsl(0, 25.5%, 32%), 0 1px 0 0 hsl(0, 25.5%, 32%);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 35.5%, 32%), 0 1px 0 0 hsl(0, 35.5%, 32%);
 }
 .wrapper.style5 {
-  background-color: hsl(0, 24%, 35%);
+  background-color: hsl(0, 34%, 35%);
 }
 .wrapper.style5:before, .wrapper.style5:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 24%25, 35%25)%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 34%25, 35%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper.style5:before {
-  box-shadow: inset 0 -1px 0 0 hsl(0, 24%, 35%), 0 1px 0 0 hsl(0, 24%, 35%);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 34%, 35%), 0 1px 0 0 hsl(0, 34%, 35%);
 }
 .wrapper.style5:after {
-  box-shadow: inset 0 -1px 0 0 hsl(0, 24%, 35%), 0 1px 0 0 hsl(0, 24%, 35%);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 34%, 35%), 0 1px 0 0 hsl(0, 34%, 35%);
 }
 .wrapper.style6 {
-  background-color: hsl(0, 22.5%, 38%);
+  background-color: hsl(0, 32.5%, 38%);
 }
 .wrapper.style6:before, .wrapper.style6:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 22.5%25, 38%25)%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 32.5%25, 38%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper.style6:before {
-  box-shadow: inset 0 -1px 0 0 hsl(0, 22.5%, 38%), 0 1px 0 0 hsl(0, 22.5%, 38%);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 32.5%, 38%), 0 1px 0 0 hsl(0, 32.5%, 38%);
 }
 .wrapper.style6:after {
-  box-shadow: inset 0 -1px 0 0 hsl(0, 22.5%, 38%), 0 1px 0 0 hsl(0, 22.5%, 38%);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 32.5%, 38%), 0 1px 0 0 hsl(0, 32.5%, 38%);
 }
 .wrapper.spotlight:before, .wrapper.spotlight:after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 40%25, 34%25)%3B' /%3E%3C/svg%3E");
@@ -3303,8 +3303,8 @@ body.is-preload #banner p {
 }
 @media screen and (max-width: 1280px) {
   #footer {
-    background-color: hsl(0, 30%, 23%);
-    background-image: linear-gradient(to top, hsla(0, 30%, 23%, 0.8), hsla(0, 30%, 23%, 0.8)), url("../../images/bg.jpg");
+    background-color: hsl(0, 40%, 23%);
+    background-image: linear-gradient(to top, hsla(0, 40%, 23%, 0.8), hsla(0, 40%, 23%, 0.8)), url("../../images/bg.jpg");
     background-size: auto, cover;
     background-position: center, center;
     margin-top: -6.5em;
