@@ -93,8 +93,8 @@ html {
 }
 
 body {
-  background-color: #412e2e;
-  background-image: linear-gradient(to top, rgba(65, 46, 46, 0.8), rgba(65, 46, 46, 0.8)), url("../../images/bg.jpg");
+  background-color: hsl(0, 30%, 23%);
+  background-image: linear-gradient(to top, hsla(0, 30%, 23%, 0.8), hsla(0, 30%, 23%, 0.8)), url("../../images/bg.jpg");
   background-size: auto, cover;
   background-attachment: fixed, fixed;
   background-position: center, center;
@@ -1738,7 +1738,7 @@ input[type=email]:focus,
 input[type=tel]:focus,
 select:focus,
 textarea:focus {
-  border-color: rgb(139.3483121387, 64.2516878613, 64.2516878613);
+  border-color: hsl(0, 37%, 40%);
 }
 
 select {
@@ -1752,7 +1752,7 @@ select {
 }
 select option {
   color: #ffffff;
-  background: #412e2e;
+  background: hsl(0, 30%, 23%);
 }
 select:focus::-ms-value {
   background-color: transparent;
@@ -1837,11 +1837,11 @@ input[type=radio]:checked + label:before {
   background: #ffffff;
   border-color: #ffffff;
   content: "\f00c";
-  color: #412e2e;
+  color: hsl(0, 30%, 23%);
 }
 input[type=checkbox]:focus + label:before,
 input[type=radio]:focus + label:before {
-  border-color: #793434;
+  border-color: hsl(0, 40%, 34%);
 }
 
 input[type=checkbox] + label:before {
@@ -2207,7 +2207,7 @@ ul.pagination li > .page:hover {
   background-color: rgba(255, 255, 255, 0.025);
 }
 ul.pagination li > .page.active {
-  background-color: #793434;
+  background-color: hsl(0, 40%, 34%);
 }
 ul.pagination li:first-child {
   padding-right: 0.75em;
@@ -2349,7 +2349,7 @@ input[type=reset].primary,
 input[type=button].primary,
 button.primary,
 .button.primary {
-  background-color: #793434;
+  background-color: hsl(0, 40%, 34%);
   box-shadow: none;
 }
 input[type=submit].primary:hover,
@@ -2357,21 +2357,21 @@ input[type=reset].primary:hover,
 input[type=button].primary:hover,
 button.primary:hover,
 .button.primary:hover {
-  background-color: rgb(130.2889060694, 58.0110939306, 58.0110939306);
+  background-color: hsl(0, 38.5%, 37%);
 }
 input[type=submit].primary:active,
 input[type=reset].primary:active,
 input[type=button].primary:active,
 button.primary:active,
 .button.primary:active {
-  background-color: rgb(111.4815939306, 46.2184060694, 46.2184060694);
+  background-color: hsl(0, 41.5%, 31%);
 }
 input[type=submit].primary.icon:before,
 input[type=reset].primary.icon:before,
 input[type=button].primary.icon:before,
 button.primary.icon:before,
 .button.primary.icon:before {
-  color: rgb(154.5, 102.75, 102.75);
+  color: rgb(154.785, 102.765, 102.765);
 }
 input[type=submit].fit,
 input[type=reset].fit,
@@ -2429,7 +2429,7 @@ button:disabled,
 }
 .features article {
   padding: 1.75em 1.75em 0.1em 1.75em;
-  background-color: rgb(73.0122094595, 53.2877905405, 53.2877905405);
+  background-color: hsl(0, 28.5%, 26%);
   border-radius: 5px;
   margin: 1.5em 3em 1.5em 0;
   width: calc(50% - 1.5em);
@@ -2485,7 +2485,7 @@ button:disabled,
   -webkit-transition: background-color 0.2s ease-in-out;
   -ms-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
-  background-color: rgba(73.0122094595, 53.2877905405, 53.2877905405, 0.95);
+  background-color: hsla(0, 28.5%, 26%, 0.95);
   height: 3.5em;
   left: 0;
   line-height: 3.5em;
@@ -2645,7 +2645,7 @@ button:disabled,
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background: rgba(65, 46, 46, 0.8);
+  background: hsla(0, 30%, 23%, 0.8);
   cursor: default;
   height: 100%;
   left: 0;
@@ -2667,7 +2667,7 @@ button:disabled,
   -ms-transition: opacity 0.35s ease, -ms-transform 0.35s ease;
   transition: opacity 0.35s ease, transform 0.35s ease;
   -webkit-overflow-scrolling: touch;
-  background: #793434;
+  background: hsl(0, 40%, 34%);
   border-radius: 5px;
   display: block;
   max-width: 100%;
@@ -2717,7 +2717,7 @@ button:disabled,
   text-transform: uppercase;
 }
 #menu .links li a:hover {
-  background: rgb(111.4815939306, 46.2184060694, 46.2184060694);
+  background: hsl(0, 41.5%, 31%);
 }
 @media screen and (max-width: 736px) {
   #menu .inner {
@@ -2831,8 +2831,8 @@ body.is-menu-visible #menu .inner {
 @media screen and (max-width: 1280px) {
   #banner {
     padding: 7em 0 8.25em 0;
-    background-color: #412e2e;
-    background-image: linear-gradient(to top, rgba(65, 46, 46, 0.8), rgba(65, 46, 46, 0.8)), url("../../images/bg.jpg");
+    background-color: hsl(0, 30%, 23%);
+    background-image: linear-gradient(to top, hsla(0, 30%, 23%, 0.8), hsla(0, 30%, 23%, 0.8)), url("../../images/bg.jpg");
     background-size: auto, cover;
     background-position: center, center;
     margin-bottom: -6.5em;
@@ -2920,8 +2920,8 @@ body.is-preload #banner p {
 @media screen and (max-width: 1280px) {
   #wrapper > header {
     padding: 9em 0 6.25em 0;
-    background-color: #412e2e;
-    background-image: linear-gradient(to top, rgba(65, 46, 46, 0.8), rgba(65, 46, 46, 0.8)), url("../../images/bg.jpg");
+    background-color: hsl(0, 30%, 23%);
+    background-image: linear-gradient(to top, hsla(0, 30%, 23%, 0.8), hsla(0, 30%, 23%, 0.8)), url("../../images/bg.jpg");
     background-size: auto, cover;
     background-position: center, 0% 30%;
     margin-bottom: -6.5em;
@@ -2953,18 +2953,18 @@ body.is-preload #banner p {
 }
 
 .wrapper {
-  background-color: #412e2e;
+  background-color: hsl(0, 30%, 23%);
   margin: 6.5em 0;
   position: relative;
 }
 .wrapper:before, .wrapper:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23412e2e%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 30%25, 23%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper:before {
-  box-shadow: inset 0 -1px 0 0 #412e2e, 0 1px 0 0 #412e2e;
+  box-shadow: inset 0 -1px 0 0 hsl(0, 30%, 23%), 0 1px 0 0 hsl(0, 30%, 23%);
 }
 .wrapper:after {
-  box-shadow: inset 0 -1px 0 0 #412e2e, 0 1px 0 0 #412e2e;
+  box-shadow: inset 0 -1px 0 0 hsl(0, 30%, 23%), 0 1px 0 0 hsl(0, 30%, 23%);
 }
 .wrapper:before, .wrapper:after {
   background-repeat: no-repeat;
@@ -3005,76 +3005,76 @@ body.is-preload #banner p {
   width: 55em;
 }
 .wrapper.style2 {
-  background-color: rgb(73.0122094595, 53.2877905405, 53.2877905405);
+  background-color: hsl(0, 28.5%, 26%);
 }
 .wrapper.style2:before, .wrapper.style2:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgb(73.0122094595, 53.2877905405, 53.2877905405)%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 28.5%25, 26%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper.style2:before {
-  box-shadow: inset 0 -1px 0 0 rgb(73.0122094595, 53.2877905405, 53.2877905405), 0 1px 0 0 rgb(73.0122094595, 53.2877905405, 53.2877905405);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 28.5%, 26%), 0 1px 0 0 hsl(0, 28.5%, 26%);
 }
 .wrapper.style2:after {
-  box-shadow: inset 0 -1px 0 0 rgb(73.0122094595, 53.2877905405, 53.2877905405), 0 1px 0 0 rgb(73.0122094595, 53.2877905405, 53.2877905405);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 28.5%, 26%), 0 1px 0 0 hsl(0, 28.5%, 26%);
 }
 .wrapper.style3 {
-  background-color: rgb(80.7949189189, 60.8050810811, 60.8050810811);
+  background-color: hsl(0, 27%, 29%);
 }
 .wrapper.style3:before, .wrapper.style3:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgb(80.7949189189, 60.8050810811, 60.8050810811)%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 27%25, 29%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper.style3:before {
-  box-shadow: inset 0 -1px 0 0 rgb(80.7949189189, 60.8050810811, 60.8050810811), 0 1px 0 0 rgb(80.7949189189, 60.8050810811, 60.8050810811);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 27%, 29%), 0 1px 0 0 hsl(0, 27%, 29%);
 }
 .wrapper.style3:after {
-  box-shadow: inset 0 -1px 0 0 rgb(80.7949189189, 60.8050810811, 60.8050810811), 0 1px 0 0 rgb(80.7949189189, 60.8050810811, 60.8050810811);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 27%, 29%), 0 1px 0 0 hsl(0, 27%, 29%);
 }
 .wrapper.style4 {
-  background-color: rgb(88.3481283784, 68.5518716216, 68.5518716216);
+  background-color: hsl(0, 25.5%, 32%);
 }
 .wrapper.style4:before, .wrapper.style4:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgb(88.3481283784, 68.5518716216, 68.5518716216)%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 25.5%25, 32%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper.style4:before {
-  box-shadow: inset 0 -1px 0 0 rgb(88.3481283784, 68.5518716216, 68.5518716216), 0 1px 0 0 rgb(88.3481283784, 68.5518716216, 68.5518716216);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 25.5%, 32%), 0 1px 0 0 hsl(0, 25.5%, 32%);
 }
 .wrapper.style4:after {
-  box-shadow: inset 0 -1px 0 0 rgb(88.3481283784, 68.5518716216, 68.5518716216), 0 1px 0 0 rgb(88.3481283784, 68.5518716216, 68.5518716216);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 25.5%, 32%), 0 1px 0 0 hsl(0, 25.5%, 32%);
 }
 .wrapper.style5 {
-  background-color: rgb(95.6718378378, 76.5281621622, 76.5281621622);
+  background-color: hsl(0, 24%, 35%);
 }
 .wrapper.style5:before, .wrapper.style5:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgb(95.6718378378, 76.5281621622, 76.5281621622)%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 24%25, 35%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper.style5:before {
-  box-shadow: inset 0 -1px 0 0 rgb(95.6718378378, 76.5281621622, 76.5281621622), 0 1px 0 0 rgb(95.6718378378, 76.5281621622, 76.5281621622);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 24%, 35%), 0 1px 0 0 hsl(0, 24%, 35%);
 }
 .wrapper.style5:after {
-  box-shadow: inset 0 -1px 0 0 rgb(95.6718378378, 76.5281621622, 76.5281621622), 0 1px 0 0 rgb(95.6718378378, 76.5281621622, 76.5281621622);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 24%, 35%), 0 1px 0 0 hsl(0, 24%, 35%);
 }
 .wrapper.style6 {
-  background-color: rgb(102.7660472973, 84.7339527027, 84.7339527027);
+  background-color: hsl(0, 22.5%, 38%);
 }
 .wrapper.style6:before, .wrapper.style6:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgb(102.7660472973, 84.7339527027, 84.7339527027)%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 22.5%25, 38%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper.style6:before {
-  box-shadow: inset 0 -1px 0 0 rgb(102.7660472973, 84.7339527027, 84.7339527027), 0 1px 0 0 rgb(102.7660472973, 84.7339527027, 84.7339527027);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 22.5%, 38%), 0 1px 0 0 hsl(0, 22.5%, 38%);
 }
 .wrapper.style6:after {
-  box-shadow: inset 0 -1px 0 0 rgb(102.7660472973, 84.7339527027, 84.7339527027), 0 1px 0 0 rgb(102.7660472973, 84.7339527027, 84.7339527027);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 22.5%, 38%), 0 1px 0 0 hsl(0, 22.5%, 38%);
 }
 .wrapper.spotlight:before, .wrapper.spotlight:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23793434%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 40%25, 34%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper.spotlight:before {
-  box-shadow: inset 0 -1px 0 0 #793434, 0 1px 0 0 #793434;
+  box-shadow: inset 0 -1px 0 0 hsl(0, 40%, 34%), 0 1px 0 0 hsl(0, 40%, 34%);
 }
 .wrapper.spotlight:after {
-  box-shadow: inset 0 -1px 0 0 #793434, 0 1px 0 0 #793434;
+  box-shadow: inset 0 -1px 0 0 hsl(0, 40%, 34%), 0 1px 0 0 hsl(0, 40%, 34%);
 }
 .wrapper.spotlight {
-  background-color: #793434;
+  background-color: hsl(0, 40%, 34%);
 }
 .wrapper.spotlight .inner {
   display: -moz-flex;
@@ -3116,64 +3116,64 @@ body.is-preload #banner p {
   margin: 0 0 2em 3em;
 }
 .wrapper.spotlight.style2 {
-  background-color: rgb(111.4815939306, 46.2184060694, 46.2184060694);
+  background-color: hsl(0, 41.5%, 31%);
 }
 .wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgb(111.4815939306, 46.2184060694, 46.2184060694)%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 41.5%25, 31%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper.spotlight.style2:before {
-  box-shadow: inset 0 -1px 0 0 rgb(111.4815939306, 46.2184060694, 46.2184060694), 0 1px 0 0 rgb(111.4815939306, 46.2184060694, 46.2184060694);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 41.5%, 31%), 0 1px 0 0 hsl(0, 41.5%, 31%);
 }
 .wrapper.spotlight.style2:after {
-  box-shadow: inset 0 -1px 0 0 rgb(111.4815939306, 46.2184060694, 46.2184060694), 0 1px 0 0 rgb(111.4815939306, 46.2184060694, 46.2184060694);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 41.5%, 31%), 0 1px 0 0 hsl(0, 41.5%, 31%);
 }
 .wrapper.spotlight.style3 {
-  background-color: rgb(101.7336878613, 40.6663121387, 40.6663121387);
+  background-color: hsl(0, 43%, 28%);
 }
 .wrapper.spotlight.style3:before, .wrapper.spotlight.style3:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgb(101.7336878613, 40.6663121387, 40.6663121387)%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 43%25, 28%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper.spotlight.style3:before {
-  box-shadow: inset 0 -1px 0 0 rgb(101.7336878613, 40.6663121387, 40.6663121387), 0 1px 0 0 rgb(101.7336878613, 40.6663121387, 40.6663121387);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 43%, 28%), 0 1px 0 0 hsl(0, 43%, 28%);
 }
 .wrapper.spotlight.style3:after {
-  box-shadow: inset 0 -1px 0 0 rgb(101.7336878613, 40.6663121387, 40.6663121387), 0 1px 0 0 rgb(101.7336878613, 40.6663121387, 40.6663121387);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 43%, 28%), 0 1px 0 0 hsl(0, 43%, 28%);
 }
 .wrapper.spotlight.style4 {
-  background-color: rgb(91.7562817919, 35.3437182081, 35.3437182081);
+  background-color: hsl(0, 44.5%, 25%);
 }
 .wrapper.spotlight.style4:before, .wrapper.spotlight.style4:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgb(91.7562817919, 35.3437182081, 35.3437182081)%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 44.5%25, 25%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper.spotlight.style4:before {
-  box-shadow: inset 0 -1px 0 0 rgb(91.7562817919, 35.3437182081, 35.3437182081), 0 1px 0 0 rgb(91.7562817919, 35.3437182081, 35.3437182081);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 44.5%, 25%), 0 1px 0 0 hsl(0, 44.5%, 25%);
 }
 .wrapper.spotlight.style4:after {
-  box-shadow: inset 0 -1px 0 0 rgb(91.7562817919, 35.3437182081, 35.3437182081), 0 1px 0 0 rgb(91.7562817919, 35.3437182081, 35.3437182081);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 44.5%, 25%), 0 1px 0 0 hsl(0, 44.5%, 25%);
 }
 .wrapper.spotlight.style5 {
-  background-color: rgb(81.5493757225, 30.2506242775, 30.2506242775);
+  background-color: hsl(0, 46%, 22%);
 }
 .wrapper.spotlight.style5:before, .wrapper.spotlight.style5:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgb(81.5493757225, 30.2506242775, 30.2506242775)%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 46%25, 22%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper.spotlight.style5:before {
-  box-shadow: inset 0 -1px 0 0 rgb(81.5493757225, 30.2506242775, 30.2506242775), 0 1px 0 0 rgb(81.5493757225, 30.2506242775, 30.2506242775);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 46%, 22%), 0 1px 0 0 hsl(0, 46%, 22%);
 }
 .wrapper.spotlight.style5:after {
-  box-shadow: inset 0 -1px 0 0 rgb(81.5493757225, 30.2506242775, 30.2506242775), 0 1px 0 0 rgb(81.5493757225, 30.2506242775, 30.2506242775);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 46%, 22%), 0 1px 0 0 hsl(0, 46%, 22%);
 }
 .wrapper.spotlight.style6 {
-  background-color: rgb(71.1129696532, 25.3870303468, 25.3870303468);
+  background-color: hsl(0, 47.5%, 19%);
 }
 .wrapper.spotlight.style6:before, .wrapper.spotlight.style6:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgb(71.1129696532, 25.3870303468, 25.3870303468)%3B' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:hsl(0, 47.5%25, 19%25)%3B' /%3E%3C/svg%3E");
 }
 .wrapper.spotlight.style6:before {
-  box-shadow: inset 0 -1px 0 0 rgb(71.1129696532, 25.3870303468, 25.3870303468), 0 1px 0 0 rgb(71.1129696532, 25.3870303468, 25.3870303468);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 47.5%, 19%), 0 1px 0 0 hsl(0, 47.5%, 19%);
 }
 .wrapper.spotlight.style6:after {
-  box-shadow: inset 0 -1px 0 0 rgb(71.1129696532, 25.3870303468, 25.3870303468), 0 1px 0 0 rgb(71.1129696532, 25.3870303468, 25.3870303468);
+  box-shadow: inset 0 -1px 0 0 hsl(0, 47.5%, 19%), 0 1px 0 0 hsl(0, 47.5%, 19%);
 }
 @media screen and (max-width: 980px) {
   .wrapper {
@@ -3303,8 +3303,8 @@ body.is-preload #banner p {
 }
 @media screen and (max-width: 1280px) {
   #footer {
-    background-color: #412e2e;
-    background-image: linear-gradient(to top, rgba(65, 46, 46, 0.8), rgba(65, 46, 46, 0.8)), url("../../images/bg.jpg");
+    background-color: hsl(0, 30%, 23%);
+    background-image: linear-gradient(to top, hsla(0, 30%, 23%, 0.8), hsla(0, 30%, 23%, 0.8)), url("../../images/bg.jpg");
     background-size: auto, cover;
     background-position: center, center;
     margin-top: -6.5em;
@@ -3364,3 +3364,5 @@ body.is-preload #banner p {
     padding: 2em 1.5em 0.1em 1.5em;
   }
 }
+
+/*# sourceMappingURL=main.css.map */
