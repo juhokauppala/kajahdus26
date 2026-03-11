@@ -7,8 +7,10 @@ on:
     paths: [ '_secret_raw.html' ]
 
 jobs:
-  encrypt:
+  Encrypt secret.html:
     runs-on: ubuntu-slim
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
