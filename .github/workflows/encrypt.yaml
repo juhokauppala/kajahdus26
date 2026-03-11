@@ -1,0 +1,39 @@
+name: Encrypt Secrets
+run-name: Encrypt after ${{ github.event.head_commit.message }}
+
+on:
+  push:
+    branches: [ main ]
+    paths: [ '_secret_raw.html' ]
+
+jobs:
+  encrypt:
+    runs-on: ubuntu-slim
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup pagecrypt npm package
+        run: npm install -g pagecrypt
+
+      - name: Replace secrets in _secret_raw.html with environment variables
+        env:
+          HOTELLILAHDEKOODI: ${{ secrets.HOTELLI_LAHDE_KOODI }}
+          HOTELLILAPPEEKOODI: ${{ secrets.SOKOS_HOTEL_KOODI }}
+        run: |
+          sed -i "s/\$HOTELLILAHDEKOODI/$HOTELLILAHDEKOODI/g" _secret_raw.html
+          sed -i "s/\$HOTELLILAPPEEKOODI/$HOTELLILAPPEEKOODI/g" _secret_raw.html
+
+      - name: Encrypt secrets
+        env:
+          PASSWORD: ${{ secrets.PASSWORD }}
+        run: npx pagecrypt _secret_raw.html secret.html "$PASSWORD"
+
+      - name: Commit and push encrypted secrets
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add secret.html
+          git commit -m "workflow: encrypt secrets after ${{ github.event.head_commit.id }}"
+          git push origin main
