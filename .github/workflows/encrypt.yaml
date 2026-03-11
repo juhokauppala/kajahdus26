@@ -5,6 +5,7 @@ on:
   push:
     branches: [ main ]
     paths: [ '_secret_raw.html' ]
+  workflow_dispatch:
 
 jobs:
   encrypt:
