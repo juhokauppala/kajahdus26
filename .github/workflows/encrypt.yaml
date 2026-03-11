@@ -7,7 +7,8 @@ on:
     paths: [ '_secret_raw.html' ]
 
 jobs:
-  Encrypt secret.html:
+  encrypt:
+    name: Encrypt and push secret.html
     runs-on: ubuntu-slim
     permissions:
       contents: write
