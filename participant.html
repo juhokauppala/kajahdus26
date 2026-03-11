@@ -176,8 +176,58 @@
               <a href="mailto:majoitus@kajahdus26.fi">majoitus@kajahdus26.fi</a
               >.
             </p>
-            <h4>Hotellikoodit</h4>
-            <iframe src="/secret.html" width="300" height="300" ></iframe>
+            <div style="display: flex; flex-flow: row; gap: 12px; cursor: pointer;" onclick="toggleModal()" >
+              <img src="/images/locked.png" height="20" width="20" style="border-radius: 100%;" />
+              <h4>Hotellikoodit</h4>
+              <img src="/images/locked.png" height="20" width="20" style="border-radius: 100%;" />
+            </div>
+            <div class="modal">
+              <div class="modal__padding">
+                <iframe src="/secret.html" width="300" height="300" ></iframe>
+              </div>
+              <div class="modal__backdrop" onclick="toggleModal()"></div>
+            </div>
+            <script>
+              function toggleModal() {
+                const modal = document.querySelector('.modal');
+                if (!modal) return;
+                modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+              }
+            </script>
+            <style>
+              .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+                overflow: auto;
+                justify-content: center;
+              }
+
+              .modal .modal__padding {
+                display: flex;
+                flex-flow: column;
+                padding: 4em;
+                z-index: 10;
+                width: fit-content;
+                height: fit-content;
+                border-radius: 22px;
+                background-color: rgba(0, 0, 0, 0.7);
+                position: absolute;;
+                top: 64px;
+              }
+
+              .modal .modal__backdrop {
+                z-index: 5;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                position: relative;
+              }
+            </style>
           </div>
         </section>
 
