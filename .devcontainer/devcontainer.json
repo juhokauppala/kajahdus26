@@ -19,8 +19,8 @@
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "npm install -g pagecrypt http-server"
-
+  "postCreateCommand": "git config --global user.name juhokauppala && git config --global user.email juho.kauppala@gmail.com",
+  "postStartCommand": "npm install -g pagecrypt http-server"
   // Configure tool-specific properties.
   // "customizations": {},
 
