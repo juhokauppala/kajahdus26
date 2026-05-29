@@ -143,36 +143,74 @@
           <!-- <a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a> -->
           <div class="content">
             <h2 class="major" style="text-align: center">Sponsorimme</h2>
-            <div style="
-                  display: flex;
-                  gap: 24px;
-                  flex-wrap: wrap;
-                  align-items: center;
-                  justify-content: center;
-                ">
-              <a href="https://www.lut.fi/fi" rel="external noopener" target="_blank"
-                style="padding: 32px; flex-basis: 100%; text-align: center">
-                <img src="images/LUT logo.png" alt="LUT" height="150" />
+            <style>
+              .sponsors {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                row-gap: 30px;
+                max-width: 600px;
+                margin: 0 auto;
+              }
+
+              .sponsors a {
+                transition: transform 0.3s ease;
+                flex: 0 1 45%;
+              }
+
+              .sponsors a:hover {
+                transform: scale(1.05);
+              }
+
+              .sponsors .big {
+                flex-basis: 100%;
+                text-align: center;
+              }
+
+              .sponsors img {
+                width: 100%;
+                height: auto;
+                display: block;
+              }
+            </style>
+            <div class="sponsors">
+              <!-- BIG SPONSORS -->
+              <a href="https://www.lut.fi/fi" rel="external noopener" target="_blank" class="big">
+                <img src="images/Sponsorilogoja/Iso - LUT logo.png" alt="LUT" />
               </a>
+              <!-- MEDIUM SPONSORS -->
+              <a href="https://www.lappeenranta.fi/fi" rel="external noopener" target="_blank" class="big">
+                <img src="images/Sponsorilogoja/Medium - LPR kaupunki.PNG" alt="Lappeenrannan kaupunki"
+                  style="padding: 8%;" />
+              </a>
+              <a href="https://ltky.fi/" rel="external noopener" target="_blank" class="big">
+                <img src="images/Sponsorilogoja/Medium - LTKY banneri virallinen.png" alt="LTKY"
+                  style="border-radius: 12px; padding: 3%; margin: 5% 0; background-color: white;" />
+              </a>
+              <!-- REST SPONSORS -->
               <a href="https://www.loas.fi/" rel="external noopener" target="_blank">
-                <img src="images/LOAS logo.png" alt="LOAS" height="100" />
-              </a>
-              <a href="https://www.karjalankulttuurirahasto.fi/" rel="external noopener" target="_blank">
-                <img src="images/Karjalan kulttuurirahasto logo.png" alt="Karjalan kulttuurirahasto" height="100" style="
-                      background-color: #ffffff97;
-                      padding: 8px;
-                      border-radius: 8px;
-                    " />
-              </a>
-              <a href="https://kesamaenleipomo.fi/" rel="external noopener" target="_blank">
-                <img src="images/Kesamaen leipomo.jpg" alt="Kesämäen leipomo" height="120" style="border-radius: 8px" />
+                <img src="images/Sponsorilogoja/Pieni - LOAS logo.png" alt="LOAS" />
               </a>
               <a href="https://tek.fi" rel="external noopener" target="_blank">
-                <img src="images/TEK logo.png" alt="Tekniikan akateemiset" height="120" style="
+                <img src="images/Sponsorilogoja/Pieni - TEK logo.png" alt="Tekniikan akateemiset" style="
                       background-color: #ffffff97;
                       padding: 8px;
                       border-radius: 8px;
                     " />
+              </a>
+              <a href="https://www.karjalankulttuurirahasto.fi/" rel="external noopener" target="_blank"
+                style="flex-basis: 65%">
+                <img src="images/Sponsorilogoja/Pieni - Karjalan kulttuurirahasto logo.png"
+                  alt="Karjalan kulttuurirahasto" style="
+                      background-color: #ffffff97;
+                      padding: 8px;
+                      border-radius: 8px;
+                    " />
+              </a>
+              <a href="https://kesamaenleipomo.fi/" rel="external noopener" target="_blank" style="flex-basis: 25%">
+                <img src="images/Sponsorilogoja/Pieni - Kesämäen leipomo.jpg" alt="Kesämäen leipomo"
+                  style="border-radius: 8px" />
               </a>
             </div>
           </div>
