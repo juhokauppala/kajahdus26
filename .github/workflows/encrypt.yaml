@@ -25,9 +25,12 @@ jobs:
         env:
           HOTELLILAHDEKOODI: ${{ secrets.HOTELLI_LAHDE_KOODI }}
           HOTELLILAPPEEKOODI: ${{ secrets.SOKOS_HOTEL_KOODI }}
+          CONCERT_CONTENT_URL: ${{ secrets.CONCERT_CONTENT_URL }}
         run: |
-          sed -i "s/\$HOTELLILAHDEKOODI/$HOTELLILAHDEKOODI/g" _participant_raw.html
-          sed -i "s/\$HOTELLILAPPEEKOODI/$HOTELLILAPPEEKOODI/g" _participant_raw.html
+          sed -i -e "s/\$HOTELLILAHDEKOODI/$HOTELLILAHDEKOODI/g" \
+                 -e "s/\$HOTELLILAPPEEKOODI/$HOTELLILAPPEEKOODI/g" \
+                 -e "s/\$CONCERT_CONTENT_URL/$CONCERT_CONTENT_URL/g" \
+                 _participant_raw.html
 
       - name: Encrypt secrets
         env:
