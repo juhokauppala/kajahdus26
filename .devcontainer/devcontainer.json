@@ -19,10 +19,10 @@
   "forwardPorts": [8080],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "git config --global user.name juhokauppala && git config --global user.email juho.kauppala@gmail.com",
+  "postCreateCommand": ".devcontainer/postcreateCommand.sh",
   "postStartCommand": ".devcontainer/poststartCommand.sh",
   "postAttachCommand": {
-    "server": "setsid http-server -p 8080 -c-1 > /tmp/http-server.log 2>&1 < /dev/null & sleep 2;"
+    "server": ".devcontainer/postattachCommand.sh"
   },
   // Configure tool-specific properties.
   // "customizations": {},
