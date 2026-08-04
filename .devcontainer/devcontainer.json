@@ -16,13 +16,19 @@
   // "features": {},
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  // "forwardPorts": [],
+  "forwardPorts": [8080],
 
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "git config --global user.name juhokauppala && git config --global user.email juho.kauppala@gmail.com",
-  "postStartCommand": "npm install -g pagecrypt http-server"
+  "postStartCommand": ".devcontainer/poststartCommand.sh",
+  "postAttachCommand": {
+    "server": "setsid http-server -p 8080 -c-1 > /tmp/http-server.log 2>&1 < /dev/null & sleep 2;"
+  },
   // Configure tool-specific properties.
   // "customizations": {},
+  "runArgs": ["--userns=keep-id", "--tmpfs", "/tmp:rw,exec,mode=1777,size=1g"],
+  "containerUser": "vscode",
+  "remoteUser": "vscode"
 
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
   // "remoteUser": "root"
