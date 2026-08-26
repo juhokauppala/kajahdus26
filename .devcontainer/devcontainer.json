@@ -26,14 +26,9 @@
   },
   // Configure tool-specific properties.
   // "customizations": {},
-  "runArgs": ["--userns=keep-id", "--tmpfs", "/tmp:rw,exec,mode=1777,size=1g"],
-  "containerUser": "vscode",
-  "remoteUser": "vscode",
   "customizations": {
     "vscode": {
-      "extensions": [
-        "esbenp.prettier-vscode"
-      ]
+      "extensions": ["esbenp.prettier-vscode"]
     }
   }
 
