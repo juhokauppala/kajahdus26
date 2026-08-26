@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serve": "PASSWORD=dsa eleventy --serve --port=8080",
-    "generate": "eleventy --input=. --output=_site",
+    "generate": "eleventy --input=. --output=_site && find _site/participant -type f -iname \"*.html\" -exec pagecrypt {} {} \"$PASSWORD\" \\;",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
