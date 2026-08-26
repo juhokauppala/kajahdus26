@@ -1,416 +1,323 @@
-<!doctype html>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-  <head>
-    <title>Kajahdus</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link
-      rel="shortcut icon"
-      href="images/cropped_circle_image.png"
-      type="image/x-icon"
-    />
-    <noscript>
-      <link rel="stylesheet" href="assets/css/noscript.css" />
-    </noscript>
-  </head>
+---
+layout: layout
+title: Etusivu
+---
 
-  <body class="is-preload">
-    <!-- Page Wrapper -->
-    <div id="page-wrapper">
-      <!-- Header -->
-      <header id="header" class="alt">
-        <h1><a href="index.html">Kajahdus</a></h1>
-        <nav>
-          <a href="#menu">Valikko</a>
-        </nav>
-      </header>
+<!-- Banner -->
+<section id="banner">
+  <div class="inner">
+    <div class="logo">
+      <img
+        src="/images/logo.png"
+        alt=""
+        height="150"
+        style="border-radius: 50%"
+      />
+    </div>
+    <h2>Kajahdus</h2>
+    <h2 id="days-until"></h2>
+    <img
+      src="/images/Sponsorilogoja/Iso - LUT logo.png"
+      style="width: 100%; max-width: 600px; display: block"
+    />
+    <span style="filter: brightness(0.5); font-size: 0.8em"
+      ><a
+        href="https://www.instagram.com/pepperivisuals/"
+        target="_blank"
+        rel="external noopener"
+      >
+        Taustakuva Pölähdys-konsertista 2024: Petri Leppävuori
+        <img src="/images/ig.webp" alt="Instagram" height="16" />
+        @pepperivisuals
+      </a>
+    </span>
+  </div>
+  <script>
+    const SECONDS = 1000;
+    const MINUTES = SECONDS * 60;
+    const HOURS = MINUTES * 60;
+    const DAYS = HOURS * 24;
 
-      <!-- Menu -->
-      <nav id="menu">
-        <div class="inner">
+    const target = "2026-11-06T17:00:00+0200";
+    const targetDate = new Date(target);
+    const dayCounterEl = document.getElementById("days-until");
+
+    const intervalId = setInterval(() => {
+      const now = new Date();
+      const diffTime = targetDate - now;
+      const diffDays = Math.floor(diffTime / DAYS);
+      const diffHours = Math.floor((diffTime % DAYS) / HOURS);
+      const diffMinutes = Math.floor((diffTime % HOURS) / MINUTES);
+      const diffSeconds = Math.floor((diffTime % MINUTES) / SECONDS);
+
+      const dayPart = diffDays > 0 ? `${diffDays} päivää <br>` : "";
+
+      dayCounterEl.innerHTML = `${dayPart}${diffHours
+        .toString()
+        .padStart(2, "0")}:${diffMinutes
+        .toString()
+        .padStart(2, "0")}:${diffSeconds.toString().padStart(2, "0")}`;
+    }, 1000); // Update every second
+  </script>
+</section>
+
+<!-- Wrapper -->
+<section id="wrapper">
+  <!-- One -->
+  <section id="one" class="wrapper spotlight style1">
+    <div class="inner">
+      <a href="#" class="image"
+        ><img src="/images/logo.png" alt="" style="filter: brightness(0.8)"
+      /></a>
+      <div class="content">
+        <h2 class="major">Mikä on Kajahdus?</h2>
+        <p>
+          Kajahdus 2026 on osa teekkarikuorojen kokoontumisajojen perinnettä,
+          joka alkoi vuonna 2015 Tampereella. Tapahtuma on järjestetty sittemmin
+          Espoossa (2019) ja Oulussa (2024), ja tänä syksynä teekkarikuorot
+          rantautuvat ensimmäistä kertaa Lappeenrantaan.
+        </p>
+
+        <p>
+          Tapahtumakonseptiin on alusta asti kuulunut viikonlopun verran
+          laulamista, oppimista ja yhdessäoloa. Kuorolaiset ovat päässeet
+          ammattilaisten pitämissä työpajoissa harjoittelemaan mm. turvallista
+          äänenmuodostusta, lauluyhtyelaulamista, kuoron johtamista sekä
+          beatboxausta. Viikonlopun kruunaavassa, yleisölle avoimessa
+          konsertissa jokainen kuoro esittää omaa ohjelmistoaan, minkä lisäksi
+          kuorot esittävät lopuksi muutaman kappaleen lähes 200-henkisenä
+          suurkuorona. Laulu jatkuu illalla vielä kuorojen yhteisessä
+          konserttikaronkassa.
+        </p>
+
+        <p>
+          Teekkarikuorojen kokoontumisajoihin ovat tervetulleita nykylaulajien
+          lisäksi kuorojen alumnit. Mikäli olet alumni ja haluaisit osallistua
+          Kajahdukseen, otathan yhteyttä omaan kuoroosi ja ilmoittaudu
+          nettisivuilta löytyvän ilmoittautumislomakkeen kautta (aukeaa
+          elokuussa).
+        </p>
+
+        <a href="/participant/" class="special">Osallistujalle</a>
+        <a href="/concert/" class="special">Konsertti</a>
+        <a href="/partner/" class="special">Yhteistyökumppanille</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Two -->
+  <section id="two" class="wrapper alt spotlight style2">
+    <div class="inner">
+      <a href="#" class="image"
+        ><img src="/images/logo.png" style="filter: brightness(0.8)" alt=""
+      /></a>
+      <div class="content">
+        <h2 class="major">#kajahdus26</h2>
+        <p>
+          Laita somekanavamme seurantaan niin saat viimeisimmät päivitykset
+          tapahtumasta!
+        </p>
+        <a href="https://www.instagram.com/kajahdus26/" class="special"
+          >Instagram
           <img
-            src="images/logo.png"
-            alt=""
-            height="150"
-            style="border-radius: 50%"
-          />
-          <ul class="links">
-            <li><a href="index.html">Etusivu</a></li>
-            <li>
-              <a href="participant.html">
-                <div
-                  style="
-                    display: inline-flex;
-                    flex-flow: row;
-                    gap: 12px;
-                    align-items: center;
-                  "
-                >
-                  <img
-                    src="/images/locked.png"
-                    height="20"
-                    width="20"
-                    style="border-radius: 100%"
-                  />
-                  <span>Osallistujalle</span>
-                  <img
-                    src="/images/locked.png"
-                    height="20"
-                    width="20"
-                    style="border-radius: 100%"
-                  />
-                </div>
-              </a>
-            </li>
-            <li><a href="concert.html">Konsertti</a></li>
-            <li><a href="partner.html">Yhteistyökumppanille</a></li>
-          </ul>
-          <a href="#" class="close">Sulje</a>
-        </div>
-      </nav>
+            src="/images/ig.webp"
+            alt="Instagram"
+            height="24"
+            style="margin-bottom: -6px"
+        /></a>
+        <a href="https://www.tiktok.com/@kajahdus26" class="special"
+          >TikTok
+          <img
+            src="/images/tik-tok-logo_578229-290.jpg"
+            alt="TikTok"
+            height="24"
+            style="margin-bottom: -6px; border-radius: 50%"
+        /></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61590128487399"
+          class="special"
+          >Facebook
+          <img
+            src="/images/Facebook_Logo_Primary.png"
+            alt="Facebook"
+            height="24"
+            style="margin-bottom: -6px; border-radius: 50%"
+        /></a>
+      </div>
+    </div>
+  </section>
 
-      <!-- Banner -->
-      <section id="banner">
-        <div class="inner">
-          <div class="logo">
+  <!-- Three -->
+  <section id="three" class="wrapper spotlight style3">
+    <div class="inner">
+      <!-- <a href="#" class="image"><img src="/images/pic03.jpg" alt="" /></a> -->
+      <div class="content">
+        <h2 class="major" style="text-align: center">Sponsorimme</h2>
+        <style>
+          .sponsors {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            row-gap: 30px;
+            max-width: 600px;
+            margin: 0 auto;
+          }
+
+          .sponsors a {
+            transition: transform 0.3s ease;
+            flex: 0 1 45%;
+          }
+
+          .sponsors a:hover {
+            transform: scale(1.05);
+          }
+
+          .sponsors .big {
+            flex-basis: 100%;
+            text-align: center;
+          }
+
+          .sponsors img {
+            width: 100%;
+            height: auto;
+            display: block;
+          }
+        </style>
+        <div class="sponsors">
+          <!-- BIG SPONSORS -->
+          <a
+            href="https://www.lut.fi/fi"
+            rel="external noopener"
+            target="_blank"
+            class="big"
+          >
+            <img src="/images/Sponsorilogoja/Iso - LUT logo.png" alt="LUT" />
+          </a>
+          <!-- MEDIUM SPONSORS -->
+          <a
+            href="https://www.lappeenranta.fi/fi"
+            rel="external noopener"
+            target="_blank"
+            class="big"
+          >
             <img
-              src="images/logo.png"
-              alt=""
-              height="150"
-              style="border-radius: 50%"
+              src="/images/Sponsorilogoja/Medium - LPR kaupunki.PNG"
+              alt="Lappeenrannan kaupunki"
+              style="padding: 8%"
             />
-          </div>
-          <h2>Kajahdus</h2>
-          <h2 id="days-until"></h2>
-          <img
-            src="images/Sponsorilogoja/Iso - LUT logo.png"
-            style="width: 100%; max-width: 600px; display: block"
-          />
-          <span style="filter: brightness(0.5); font-size: 0.8em"
-            ><a
-              href="https://www.instagram.com/pepperivisuals/"
-              target="_blank"
-              rel="external noopener"
-            >
-              Taustakuva Pölähdys-konsertista 2024: Petri Leppävuori
-              <img src="images/ig.webp" alt="Instagram" height="16" />
-              @pepperivisuals
-            </a>
-          </span>
+          </a>
+          <a
+            href="https://ltky.fi/"
+            rel="external noopener"
+            target="_blank"
+            class="big"
+          >
+            <img
+              src="/images/Sponsorilogoja/Medium - LTKY banneri virallinen.png"
+              alt="LTKY"
+              style="
+                border-radius: 12px;
+                padding: 3%;
+                margin: 5% 0;
+                background-color: white;
+              "
+            />
+          </a>
+          <!-- REST SPONSORS -->
+          <a
+            href="https://www.loas.fi/"
+            rel="external noopener"
+            target="_blank"
+          >
+            <img
+              src="/images/Sponsorilogoja/Pieni - LOAS logo.png"
+              alt="LOAS"
+            />
+          </a>
+          <a href="https://tek.fi" rel="external noopener" target="_blank">
+            <img
+              src="/images/Sponsorilogoja/Pieni - TEK logo.png"
+              alt="Tekniikan akateemiset"
+              style="
+                background-color: #ffffff97;
+                padding: 8px;
+                border-radius: 8px;
+              "
+            />
+          </a>
+          <a
+            href="https://www.karjalankulttuurirahasto.fi/"
+            rel="external noopener"
+            target="_blank"
+            style="flex-basis: 65%"
+          >
+            <img
+              src="/images/Sponsorilogoja/Pieni - Karjalan kulttuurirahasto logo.png"
+              alt="Karjalan kulttuurirahasto"
+              style="
+                background-color: #ffffff97;
+                padding: 8px;
+                border-radius: 8px;
+              "
+            />
+          </a>
+          <a
+            href="https://kesamaenleipomo.fi/"
+            rel="external noopener"
+            target="_blank"
+            style="flex-basis: 25%"
+          >
+            <img
+              src="/images/Sponsorilogoja/Pieni - Kesämäen leipomo.jpg"
+              alt="Kesämäen leipomo"
+              style="border-radius: 8px"
+            />
+          </a>
+          <a
+            href="https://saimaprint.fi/"
+            rel="external noopener"
+            target="_blank"
+            style="flex-basis: 50%"
+          >
+            <img
+              src="/images/Saimaprint.png"
+              alt="Saimaprint"
+              style="padding: 8%; background-color: white; border-radius: 8px"
+              style="border-radius: 8px"
+            />
+          </a>
         </div>
-        <script>
-          const SECONDS = 1000;
-          const MINUTES = SECONDS * 60;
-          const HOURS = MINUTES * 60;
-          const DAYS = HOURS * 24;
+      </div>
+    </div>
+  </section>
 
-          const target = "2026-11-06T17:00:00+0200";
-          const targetDate = new Date(target);
-          const dayCounterEl = document.getElementById("days-until");
-
-          const intervalId = setInterval(() => {
-            const now = new Date();
-            const diffTime = targetDate - now;
-            const diffDays = Math.floor(diffTime / DAYS);
-            const diffHours = Math.floor((diffTime % DAYS) / HOURS);
-            const diffMinutes = Math.floor((diffTime % HOURS) / MINUTES);
-            const diffSeconds = Math.floor((diffTime % MINUTES) / SECONDS);
-
-            const dayPart = diffDays > 0 ? `${diffDays} päivää <br>` : "";
-
-            dayCounterEl.innerHTML = `${dayPart}${diffHours
-              .toString()
-              .padStart(2, "0")}:${diffMinutes
-              .toString()
-              .padStart(2, "0")}:${diffSeconds.toString().padStart(2, "0")}`;
-          }, 1000); // Update every second
-        </script>
-      </section>
-
-      <!-- Wrapper -->
-      <section id="wrapper">
-        <!-- One -->
-        <section id="one" class="wrapper spotlight style1">
-          <div class="inner">
-            <a href="#" class="image"
-              ><img
-                src="images/logo.png"
-                alt=""
-                style="filter: brightness(0.8)"
-            /></a>
-            <div class="content">
-              <h2 class="major">Mikä on Kajahdus?</h2>
-              <p>
-                Kajahdus 2026 on osa teekkarikuorojen kokoontumisajojen
-                perinnettä, joka alkoi vuonna 2015 Tampereella. Tapahtuma on
-                järjestetty sittemmin Espoossa (2019) ja Oulussa (2024), ja tänä
-                syksynä teekkarikuorot rantautuvat ensimmäistä kertaa
-                Lappeenrantaan.
-              </p>
-
-              <p>
-                Tapahtumakonseptiin on alusta asti kuulunut viikonlopun verran
-                laulamista, oppimista ja yhdessäoloa. Kuorolaiset ovat päässeet
-                ammattilaisten pitämissä työpajoissa harjoittelemaan mm.
-                turvallista äänenmuodostusta, lauluyhtyelaulamista, kuoron
-                johtamista sekä beatboxausta. Viikonlopun kruunaavassa,
-                yleisölle avoimessa konsertissa jokainen kuoro esittää omaa
-                ohjelmistoaan, minkä lisäksi kuorot esittävät lopuksi muutaman
-                kappaleen lähes 200-henkisenä suurkuorona. Laulu jatkuu illalla
-                vielä kuorojen yhteisessä konserttikaronkassa.
-              </p>
-
-              <p>
-                Teekkarikuorojen kokoontumisajoihin ovat tervetulleita
-                nykylaulajien lisäksi kuorojen alumnit. Mikäli olet alumni ja
-                haluaisit osallistua Kajahdukseen, otathan yhteyttä omaan
-                kuoroosi ja ilmoittaudu nettisivuilta löytyvän
-                ilmoittautumislomakkeen kautta (aukeaa elokuussa).
-              </p>
-
-              <a href="participant.html" class="special">Osallistujalle</a>
-              <a href="concert.html" class="special">Konsertti</a>
-              <a href="partner.html" class="special">Yhteistyökumppanille</a>
-            </div>
-          </div>
-        </section>
-
-        <!-- Two -->
-        <section id="two" class="wrapper alt spotlight style2">
-          <div class="inner">
-            <a href="#" class="image"
-              ><img
-                src="images/logo.png"
-                style="filter: brightness(0.8)"
-                alt=""
-            /></a>
-            <div class="content">
-              <h2 class="major">#kajahdus26</h2>
-              <p>
-                Laita somekanavamme seurantaan niin saat viimeisimmät
-                päivitykset tapahtumasta!
-              </p>
-              <a href="https://www.instagram.com/kajahdus26/" class="special"
-                >Instagram
-                <img
-                  src="images/ig.webp"
-                  alt="Instagram"
-                  height="24"
-                  style="margin-bottom: -6px"
-              /></a>
-              <a href="https://www.tiktok.com/@kajahdus26" class="special"
-                >TikTok
-                <img
-                  src="images/tik-tok-logo_578229-290.jpg"
-                  alt="TikTok"
-                  height="24"
-                  style="margin-bottom: -6px; border-radius: 50%"
-              /></a>
-              <a
-                href="https://www.facebook.com/profile.php?id=61590128487399"
-                class="special"
-                >Facebook
-                <img
-                  src="images/Facebook_Logo_Primary.png"
-                  alt="Facebook"
-                  height="24"
-                  style="margin-bottom: -6px; border-radius: 50%"
-              /></a>
-            </div>
-          </div>
-        </section>
-
-        <!-- Three -->
-        <section id="three" class="wrapper spotlight style3">
-          <div class="inner">
-            <!-- <a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a> -->
-            <div class="content">
-              <h2 class="major" style="text-align: center">Sponsorimme</h2>
-              <style>
-                .sponsors {
-                  display: flex;
-                  flex-wrap: wrap;
-                  align-items: center;
-                  justify-content: space-between;
-                  row-gap: 30px;
-                  max-width: 600px;
-                  margin: 0 auto;
-                }
-
-                .sponsors a {
-                  transition: transform 0.3s ease;
-                  flex: 0 1 45%;
-                }
-
-                .sponsors a:hover {
-                  transform: scale(1.05);
-                }
-
-                .sponsors .big {
-                  flex-basis: 100%;
-                  text-align: center;
-                }
-
-                .sponsors img {
-                  width: 100%;
-                  height: auto;
-                  display: block;
-                }
-              </style>
-              <div class="sponsors">
-                <!-- BIG SPONSORS -->
-                <a
-                  href="https://www.lut.fi/fi"
-                  rel="external noopener"
-                  target="_blank"
-                  class="big"
-                >
-                  <img
-                    src="images/Sponsorilogoja/Iso - LUT logo.png"
-                    alt="LUT"
-                  />
-                </a>
-                <!-- MEDIUM SPONSORS -->
-                <a
-                  href="https://www.lappeenranta.fi/fi"
-                  rel="external noopener"
-                  target="_blank"
-                  class="big"
-                >
-                  <img
-                    src="images/Sponsorilogoja/Medium - LPR kaupunki.PNG"
-                    alt="Lappeenrannan kaupunki"
-                    style="padding: 8%"
-                  />
-                </a>
-                <a
-                  href="https://ltky.fi/"
-                  rel="external noopener"
-                  target="_blank"
-                  class="big"
-                >
-                  <img
-                    src="images/Sponsorilogoja/Medium - LTKY banneri virallinen.png"
-                    alt="LTKY"
-                    style="
-                      border-radius: 12px;
-                      padding: 3%;
-                      margin: 5% 0;
-                      background-color: white;
-                    "
-                  />
-                </a>
-                <!-- REST SPONSORS -->
-                <a
-                  href="https://www.loas.fi/"
-                  rel="external noopener"
-                  target="_blank"
-                >
-                  <img
-                    src="images/Sponsorilogoja/Pieni - LOAS logo.png"
-                    alt="LOAS"
-                  />
-                </a>
-                <a
-                  href="https://tek.fi"
-                  rel="external noopener"
-                  target="_blank"
-                >
-                  <img
-                    src="images/Sponsorilogoja/Pieni - TEK logo.png"
-                    alt="Tekniikan akateemiset"
-                    style="
-                      background-color: #ffffff97;
-                      padding: 8px;
-                      border-radius: 8px;
-                    "
-                  />
-                </a>
-                <a
-                  href="https://www.karjalankulttuurirahasto.fi/"
-                  rel="external noopener"
-                  target="_blank"
-                  style="flex-basis: 65%"
-                >
-                  <img
-                    src="images/Sponsorilogoja/Pieni - Karjalan kulttuurirahasto logo.png"
-                    alt="Karjalan kulttuurirahasto"
-                    style="
-                      background-color: #ffffff97;
-                      padding: 8px;
-                      border-radius: 8px;
-                    "
-                  />
-                </a>
-                <a
-                  href="https://kesamaenleipomo.fi/"
-                  rel="external noopener"
-                  target="_blank"
-                  style="flex-basis: 25%"
-                >
-                  <img
-                    src="images/Sponsorilogoja/Pieni - Kesämäen leipomo.jpg"
-                    alt="Kesämäen leipomo"
-                    style="border-radius: 8px"
-                  />
-                </a>
-                <a
-                  href="https://saimaprint.fi/"
-                  rel="external noopener"
-                  target="_blank"
-                  style="flex-basis: 50%"
-                >
-                  <img
-                    src="images/Saimaprint.png"
-                    alt="Saimaprint"
-                    style="
-                      padding: 8%;
-                      background-color: white;
-                      border-radius: 8px;
-                    "
-                    style="border-radius: 8px"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Four -->
-        <!-- <section id="four" class="wrapper alt style1">
+  <!-- Four -->
+  <!-- <section id="four" class="wrapper alt style1">
 								<div class="inner">
 									<h2 class="major">Vitae phasellus</h2>
 									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
 									<section class="features">
 										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<a href="#" class="image"><img src="/images/pic04.jpg" alt="" /></a>
 											<h3 class="major">Sed feugiat lorem</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
 											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<a href="#" class="image"><img src="/images/pic05.jpg" alt="" /></a>
 											<h3 class="major">Nisl placerat</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
 											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
+											<a href="#" class="image"><img src="/images/pic06.jpg" alt="" /></a>
 											<h3 class="major">Ante fermentum</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
 											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<a href="#" class="image"><img src="/images/pic07.jpg" alt="" /></a>
 											<h3 class="major">Fusce consequat</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
 											<a href="#" class="special">Learn more</a>
@@ -421,12 +328,12 @@
 									</ul>
 								</div>
 							</section> -->
-      </section>
+</section>
 
-      <!-- Footer -->
-      <section id="footer">
-        <div class="inner">
-          <!-- <h2 class="major">Get in touch</h2>
+<!-- Footer -->
+<section id="footer">
+  <div class="inner">
+    <!-- <h2 class="major">Get in touch</h2>
 							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
 							<form method="post" action="#">
 								<div class="fields">
@@ -447,7 +354,7 @@
 									<li><input type="submit" value="Send Message" /></li>
 								</ul>
 							</form> -->
-          <!-- <ul class="contact">
+    <!-- <ul class="contact">
 								<li class="icon solid fa-home">
 									Untitled Inc<br />
 									1234 Somewhere Road Suite #2894<br />
@@ -459,19 +366,8 @@
 								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
 								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
 							</ul> -->
-          <ul class="copyright">
-            <!-- <li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
-          </ul>
-        </div>
-      </section>
-    </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
-</html>
+    <ul class="copyright">
+      <!-- <li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
+    </ul>
+  </div>
+</section>
