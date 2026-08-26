@@ -1,10 +1,11 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
+run-name: Deploy: ${{ event.head_commit.message }}
 
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["11ty"]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -28,7 +29,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
         with:
-          ref: 11ty
+          ref: main
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
@@ -67,7 +68,7 @@ jobs:
           name: static-site
           path: "."
       - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: "."
   deploy-pages:
