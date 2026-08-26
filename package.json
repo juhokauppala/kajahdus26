@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "http-server -c-1 -p 8080",
+    "serve": "PASSWORD=dsa eleventy --serve --port=8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
