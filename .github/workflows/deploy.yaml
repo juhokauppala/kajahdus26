@@ -1,6 +1,6 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
-run-name: Deploy: ${{ event.head_commit.message }}
+run-name: "Deploy: ${{ github.event.head_commit.message }}"
 
 on:
   # Runs on pushes targeting the default branch
