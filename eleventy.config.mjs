@@ -11,7 +11,7 @@ const resolvePassword = () => {
 export default async function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("assets");
     eleventyConfig.addPassthroughCopy("images")
-    eleventyConfig.addPlugin(EleventyVitePlugin);
+    // eleventyConfig.addPlugin(EleventyVitePlugin);
     eleventyConfig.addTransform("encrypt-participant", async function (content) {
         const isSensitive = this.page.outputPath?.includes("participant")
         if (isSensitive) return encryptHTML(content, resolvePassword());
