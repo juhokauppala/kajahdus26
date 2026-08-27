@@ -53,6 +53,7 @@ jobs:
           sed -i -e "s/\$HOTELLILAHDEKOODI/$HOTELLILAHDEKOODI/g" \
                  -e "s/\$HOTELLILAPPEEKOODI/$HOTELLILAPPEEKOODI/g" \
                  -e "s,\$CONCERT_CONTENT_URL,$CONCERT_CONTENT_URL,g" \
+                 -e "s,\$SIGNUP_FORM_URL,$SIGNUP_FORM_URL,g" \
                  participant.html
       - name: Build site with 11ty
         env:
