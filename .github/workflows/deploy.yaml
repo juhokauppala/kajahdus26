@@ -55,6 +55,9 @@ jobs:
                  -e "s,\$CONCERT_CONTENT_URL,$CONCERT_CONTENT_URL,g" \
                  -e "s,\$SIGNUP_FORM_URL,$SIGNUP_FORM_URL,g" \
                  participant.html
+      - name: Compile sass into css
+        run: npx sass sass/main.scss:css/main.css sass/noscript.scss:css/noscript.css --no-source-map
+        working-directory: ./assets
       - name: Build site with 11ty
         env:
           PASSWORD: ${{ secrets.PASSWORD }}

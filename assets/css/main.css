@@ -2371,7 +2371,7 @@ input[type=reset].primary.icon:before,
 input[type=button].primary.icon:before,
 button.primary.icon:before,
 .button.primary.icon:before {
-  color: rgb(154.785, 102.765, 102.765);
+  color: rgb(60.7%, 40.3%, 40.3%);
 }
 input[type=submit].fit,
 input[type=reset].fit,
