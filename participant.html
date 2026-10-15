@@ -4,21 +4,29 @@ title: Osallistujalle
 ---
 
 <!-- Wrapper -->
-<section id="wrapper">
+<section id="wrapper" class="in-english">
   <header>
-    <div class="inner">
+    <div class="inner" lang="fi">
       <h2>Osallistujalle</h2>
       <p>Karjalasta kajahtaa 6.&mdash;8.11.2026</p>
+      <img width="48" class="clickable flag" onclick="document.querySelector('#wrapper').className = document.querySelector('#wrapper').className.replace('in-finnish', 'in-english')" src="/images/united_kingdom_round_icon_64.png" alt="In English"></img>
+    </div>
+    <div class="inner" lang="en">
+      <h2>For participants</h2>
+      <p>Let's sing on 6.&mdash;8.11.2026</p>
+      <img width="48" class="clickable flag" onclick="document.querySelector('#wrapper').className = document.querySelector('#wrapper').className.replace('in-english', 'in-finnish')" src="/images/finland_round_icon_64.png" alt="Suomeksi"></img>
     </div>
   </header>
 
   <!-- Content -->
   <section class="wrapper style2">
     <div class="inner">
-      <h3 class="major">Tapahtumainfo</h3>
+      <h3 class="major" lang="fi">Tapahtumainfo</h3>
+      <h3 class="major" lang="en">Event Information</h3>
       <p>
-        Tervetuloa Kajauttamaan Lappeenrannasta ensi syksynä! Tämä infosivu
-        tarkentuu marraskuuta lähestyessä. Muistathan seurata
+        <span lang="fi">Tervetuloa Kajauttamaan Lappeenrannasta ensi syksynä! Tämä infosivu
+        tarkentuu marraskuuta lähestyessä. Muistathan seurata</span>
+        <span lang="en">Welcome to Kajahdus in Lappeenranta next autumn! This info page will be updated as we get closer to November. Remember to follow</span>
         <a href="https://www.instagram.com/kajahdus26/">
           <img
             src="/images/ig.webp"
@@ -34,7 +42,8 @@ title: Osallistujalle
             height="24"
             style="margin-bottom: -6px; border-radius: 50%"
         /></a>
-        ja
+        <span lang="fi">ja</span>
+        <span lang="en">and</span>
         <a href="https://www.facebook.com/profile.php?id=61590128487399">
           <img
             src="/images/Facebook_Logo_Primary.png"
@@ -42,7 +51,8 @@ title: Osallistujalle
             height="24"
             style="margin-bottom: -6px; border-radius: 50%"
         /></a>
-        tilejämme (@kajahdus26) niin tiedät ensimmäisenä missä mennään!
+        <span lang="fi">tilejämme (@kajahdus26) niin tiedät ensimmäisenä missä mennään!</span>
+        <span lang="en"> (@kajahdus26) to stay updated!</span>
       </p>
       <p>
         <a href="$SIGNUP_FORM_URL" target="_blank" class="strong-link">
@@ -51,7 +61,8 @@ title: Osallistujalle
             alt="Signup Google Form"
             style="margin-bottom: -3px; height: 1em"
           />
-          Ilmoittaudu
+          <span lang="fi">Ilmoittaudu</span>
+          <span lang="en">Sign up</span>
         </a>
       </p>
 
@@ -61,7 +72,8 @@ title: Osallistujalle
           alt="Google Drive"
           style="margin-bottom: -3px; height: 1em"
         />
-        Ohjelmisto
+        <span lang="fi">Ohjelmisto</span>
+        <span lang="en">Program</span>
       </a>
       <a
         href="https://maps.app.goo.gl/gmTo25mKTVNG1qhTA"
@@ -73,7 +85,8 @@ title: Osallistujalle
           alt="Google Maps"
           style="margin-bottom: -3px; height: 1em"
         />
-        Tapahtumapaikat kartalla
+        <span lang="fi">Tapahtumapaikat kartalla</span>
+        <span lang="en">Event locations on map</span>
       </a>
       <a
         href="https://lappeenranta.digitransit.fi"
@@ -85,7 +98,8 @@ title: Osallistujalle
           alt="Google Maps"
           style="margin-bottom: -3px; height: 1em"
         />
-        Bussilinjat ja aikataulut
+        <span lang="fi">Bussilinjat ja aikataulut</span>
+        <span lang="en">Bus lines and timetables</span>
       </a>
       <style>
         .strong-link {

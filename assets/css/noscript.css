@@ -34,4 +34,31 @@ body.is-preload #banner p {
   filter: none;
 }
 
+.in-english :lang(fi) {
+  display: none;
+}
+
+.in-finnish :lang(en) {
+  display: none;
+}
+
+.flag {
+  display: inline-block;
+}
+
+.clickable {
+  cursor: pointer;
+  position: relative;
+}
+.clickable::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.1) 0%, hsla(0, 0%, 100%, 0) 10%, hsla(0, 0%, 100%, 0) 90%, hsla(0, 0%, 0%, 0.1) 100%);
+}
+
 /*# sourceMappingURL=noscript.css.map */
