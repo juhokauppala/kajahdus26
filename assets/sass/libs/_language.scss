@@ -6,36 +6,24 @@
   display: none;
 }
 
-@keyframes wow {
-  0% {
-    padding: 0;
-    margin-left: 0;
-    margin-top: 0;
-    border-color: hsla(0, 0%, 0%, 0.2);
-  }
-  100% {
-    padding: 48px;
-    margin-left: -48px;
-    margin-top: -48px;
-    border-color: hsla(0, 0%, 0%, 0);
-  }
-}
-
 .lang-switch {
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.2);
   border-radius: 50%;
+  box-shadow: none;
   width: 36px;
   height: 36px;
-  animation: wow 0.15s ease-in;
+
   padding: 0;
   box-sizing: content-box;
+  float: right;
+  margin-top: 0.5rem;
 
   img {
     margin-left: -6px;
     margin-top: -1px;
     display: block;
+  }
+  &:active {
+    transform: scale(1.1);
   }
 }
 

@@ -3376,6 +3376,25 @@ body.is-preload #banner p {
   display: none;
 }
 
+.lang-switch {
+  border-radius: 50%;
+  box-shadow: none;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  box-sizing: content-box;
+  float: right;
+  margin-top: 0.5rem;
+}
+.lang-switch img {
+  margin-left: -6px;
+  margin-top: -1px;
+  display: block;
+}
+.lang-switch:active {
+  transform: scale(1.1);
+}
+
 .flag {
   display: inline-block;
 }
