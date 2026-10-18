@@ -34,4 +34,50 @@ body.is-preload #banner p {
   filter: none;
 }
 
+.in-english :lang(fi) {
+  display: none;
+}
+
+.in-finnish :lang(en) {
+  display: none;
+}
+
+.lang-switch {
+  border-radius: 50%;
+  box-shadow: none;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  box-sizing: content-box;
+  float: right;
+  margin-top: 0.5rem;
+}
+.lang-switch img {
+  margin-left: -6px;
+  margin-top: -1px;
+  display: block;
+}
+.lang-switch:active {
+  transform: scale(1.1);
+}
+
+.flag {
+  display: inline-block;
+}
+
+.clickable {
+  cursor: pointer;
+  position: relative;
+}
+.clickable::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.1) 0%, hsla(0, 0%, 100%, 0) 10%, hsla(0, 0%, 100%, 0) 90%, hsla(0, 0%, 0%, 0.1) 100%);
+}
+
 /*# sourceMappingURL=noscript.css.map */

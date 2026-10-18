@@ -8,10 +8,6 @@
     "generate": "eleventy --input=. --output=_site && find _site/participant -type f -iname \"*.html\" -exec pagecrypt {} {} \"$PASSWORD\" \\;",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@ghpers:juhokauppala/kajahdus26.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
