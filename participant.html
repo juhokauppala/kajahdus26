@@ -6,15 +6,28 @@ title: Osallistujalle
 <!-- Wrapper -->
 <section id="wrapper" class="in-finnish">
   <header>
+    <script>
+      function setLanguage(lang) {
+        const wrapper = document.querySelector("#wrapper");
+        if (lang === "fi") {
+          wrapper.classList.remove("in-english");
+          wrapper.classList.add("in-finnish");
+
+          localStorage.setItem("preferredLanguage", "fi");
+        } else if (lang === "en") {
+          wrapper.classList.remove("in-finnish");
+          wrapper.classList.add("in-english");
+
+          localStorage.setItem("preferredLanguage", "en");
+        }
+      }
+
+      if (localStorage.getItem("preferredLanguage") === "en") {
+        setLanguage("en");
+      }
+    </script>
     <div class="inner" lang="fi">
-      <button
-        class="lang-switch"
-        onclick="
-          document.querySelector('#wrapper').className = document
-            .querySelector('#wrapper')
-            .className.replace('in-finnish', 'in-english')
-        "
-      >
+      <button class="lang-switch" onclick="setLanguage('en')">
         <img
           width="48"
           class="clickable flag"
@@ -26,14 +39,7 @@ title: Osallistujalle
       <p>Karjalasta kajahtaa 6.&mdash;8.11.2026</p>
     </div>
     <div class="inner" lang="en">
-      <button
-        class="lang-switch"
-        onclick="
-          document.querySelector('#wrapper').className = document
-            .querySelector('#wrapper')
-            .className.replace('in-english', 'in-finnish')
-        "
-      >
+      <button class="lang-switch" onclick="setLanguage('fi')">
         <img
           width="48"
           class="clickable flag"
