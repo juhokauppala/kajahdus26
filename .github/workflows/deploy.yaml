@@ -51,12 +51,14 @@ jobs:
           CONCERT_CONTENT_URL: ${{ secrets.CONCERT_CONTENT_URL }}
           PARTICIPANT_LETTER_FI_URL: ${{ secrets.PARTICIPANT_LETTER_FI_URL }}
           PARTICIPANT_LETTER_EN_URL: ${{ secrets.PARTICIPANT_LETTER_EN_URL }}
+          CANCELLATION_QUEUE_FORM_URL: ${{ secrets.CANCELLATION_QUEUE_FORM_URL }}
         run: |
           sed -i -e "s/\$HOTELLILAHDEKOODI/$HOTELLILAHDEKOODI/g" \
                  -e "s/\$HOTELLILAPPEEKOODI/$HOTELLILAPPEEKOODI/g" \
                  -e "s,\$CONCERT_CONTENT_URL,$CONCERT_CONTENT_URL,g" \
                  -e "s,\$PARTICIPANT_LETTER_FI_URL,$PARTICIPANT_LETTER_FI_URL,g" \
                  -e "s,\$PARTICIPANT_LETTER_EN_URL,$PARTICIPANT_LETTER_EN_URL,g" \
+                 -e "s,\$CANCELLATION_QUEUE_FORM_URL,$CANCELLATION_QUEUE_FORM_URL,g" \
                  participant.html
       - name: Compile sass into css
         run: npx sass sass/main.scss:css/main.css sass/noscript.scss:css/noscript.css --no-source-map
