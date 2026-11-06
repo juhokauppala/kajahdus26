@@ -15,7 +15,19 @@ title: Etusivu
       />
     </div>
     <h2>Kajahdus</h2>
-    <p id="days-until" style="font-size: 1.5em; text-transform: none"></p>
+    <p
+      id="days-until"
+      style="font-size: 1.5em; text-transform: none; margin-bottom: 1em"
+    ></p>
+    <div id="event-duration-progress">
+      <div class="progress__marker">
+        <span class="progress__label"></span>
+      </div>
+    </div>
+    <p
+      id="days-left"
+      style="font-size: 1.5em; text-transform: none; margin-bottom: 2em"
+    ></p>
     <img
       src="/images/Sponsorilogoja/Iso - LUT logo.png"
       style="width: 100%; max-width: 600px; display: block"
@@ -44,10 +56,13 @@ title: Etusivu
       const end = "2026-11-08T18:00:00+0200";
       const endDate = new Date(end);
 
-      const dayCounterEl = document.getElementById("days-until");
+      const sinceStartEl = document.getElementById("days-until");
+      const leftEl = document.getElementById("days-left");
+      const progressEl = document.getElementById("event-duration-progress");
 
       if (new Date() > endDate) {
-        dayCounterEl.innerHTML = "Tapahtuma on ohi. Kiitos osallistumisesta!";
+        sinceStartEl.innerHTML = "Tapahtuma on ohi. Kiitos osallistumisesta!";
+        progressEl.style.display = "none";
         return;
       }
 
@@ -92,9 +107,15 @@ title: Etusivu
             "0",
           )}:${diffToEnd.diffSeconds.toString().padStart(2, "0")}`;
 
-        const wholeStr = `${sinceStartStr}<br>${toEndStr}`;
+        sinceStartEl.textContent = sinceStartStr;
+        leftEl.textContent = toEndStr;
 
-        dayCounterEl.innerHTML = wholeStr;
+        const totalDuration = endDate - startDate;
+        const elapsedDuration = new Date() - startDate;
+        const progressPercent = elapsedDuration / totalDuration;
+
+        progressEl.children[0].style.width = `${progressPercent * 100}%`;
+        progressEl.children[0].children[0].textContent = `${Math.round(progressPercent * 100)} %`;
       }, 1000); // Update every second
     }
 
