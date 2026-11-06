@@ -64,9 +64,7 @@ title: Etusivu
       const diffToEnd = getDiff(endDate);
 
       const sinceStartDayPart =
-        diffSinceStart.diffDays > 0
-          ? `${diffSinceStart.diffDays} päivää, `
-          : "";
+        diffSinceStart.diffDays > 0 ? `${diffSinceStart.diffDays} pvä, ` : "";
 
       const sinceStartStr = `Hauskaa pidetty ${sinceStartDayPart}${diffSinceStart.diffHours
         .toString()
@@ -77,7 +75,7 @@ title: Etusivu
         .padStart(2, "0")}`;
 
       const toEndDayPart =
-        diffToEnd.diffDays > 0 ? `${diffToEnd.diffDays} päivää, ` : "";
+        diffToEnd.diffDays > 0 ? `${diffToEnd.diffDays} pvä, ` : "";
 
       const toEndStr = `Hauskaa jäljellä ${toEndDayPart}${diffToEnd.diffHours
         .toString()
