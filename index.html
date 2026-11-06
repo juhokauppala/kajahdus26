@@ -33,63 +33,72 @@ title: Etusivu
     </span>
   </div>
   <script>
-    const SECONDS = 1000;
-    const MINUTES = SECONDS * 60;
-    const HOURS = MINUTES * 60;
-    const DAYS = HOURS * 24;
+    function setUpCountdown() {
+      const SECONDS = 1000;
+      const MINUTES = SECONDS * 60;
+      const HOURS = MINUTES * 60;
+      const DAYS = HOURS * 24;
 
-    const start = "2026-11-06T17:00:00+0200";
-    const startDate = new Date(start);
-    const end = "2026-11-08T18:00:00+0200";
-    const endDate = new Date(end);
+      const start = "2026-11-06T17:00:00+0200";
+      const startDate = new Date(start);
+      const end = "2026-11-08T18:00:00+0200";
+      const endDate = new Date(end);
 
-    const dayCounterEl = document.getElementById("days-until");
+      const dayCounterEl = document.getElementById("days-until");
 
-    function getDiff(other) {
-      const now = new Date();
-      const before = Math.min(now, other);
-      const after = Math.max(now, other);
+      if (new Date() > endDate) {
+        dayCounterEl.innerHTML = "Tapahtuma on ohi. Kiitos osallistumisesta!";
+        return;
+      }
 
-      const diffTime = after - before;
-      const diffDays = Math.floor(diffTime / DAYS);
-      const diffHours = Math.floor((diffTime % DAYS) / HOURS);
-      const diffMinutes = Math.floor((diffTime % HOURS) / MINUTES);
-      const diffSeconds = Math.floor((diffTime % MINUTES) / SECONDS);
+      function getDiff(other) {
+        const now = new Date();
+        const before = Math.min(now, other);
+        const after = Math.max(now, other);
 
-      return { diffDays, diffHours, diffMinutes, diffSeconds };
+        const diffTime = after - before;
+        const diffDays = Math.floor(diffTime / DAYS);
+        const diffHours = Math.floor((diffTime % DAYS) / HOURS);
+        const diffMinutes = Math.floor((diffTime % HOURS) / MINUTES);
+        const diffSeconds = Math.floor((diffTime % MINUTES) / SECONDS);
+
+        return { diffDays, diffHours, diffMinutes, diffSeconds };
+      }
+
+      const intervalId = setInterval(() => {
+        const diffSinceStart = getDiff(startDate);
+        const diffToEnd = getDiff(endDate);
+
+        const sinceStartDayPart =
+          diffSinceStart.diffDays > 0 ? `${diffSinceStart.diffDays} pvä, ` : "";
+
+        const sinceStartStr = `Hauskaa pidetty ${sinceStartDayPart}${diffSinceStart.diffHours
+          .toString()
+          .padStart(2, "0")}:${diffSinceStart.diffMinutes
+          .toString()
+          .padStart(2, "0")}:${diffSinceStart.diffSeconds
+          .toString()
+          .padStart(2, "0")}`;
+
+        const toEndDayPart =
+          diffToEnd.diffDays > 0 ? `${diffToEnd.diffDays} pvä, ` : "";
+
+        const toEndStr = `Hauskaa jäljellä ${toEndDayPart}${diffToEnd.diffHours
+          .toString()
+          .padStart(2, "0")}:${diffToEnd.diffMinutes
+          .toString()
+          .padStart(
+            2,
+            "0",
+          )}:${diffToEnd.diffSeconds.toString().padStart(2, "0")}`;
+
+        const wholeStr = `${sinceStartStr}<br>${toEndStr}`;
+
+        dayCounterEl.innerHTML = wholeStr;
+      }, 1000); // Update every second
     }
 
-    const intervalId = setInterval(() => {
-      const diffSinceStart = getDiff(startDate);
-      const diffToEnd = getDiff(endDate);
-
-      const sinceStartDayPart =
-        diffSinceStart.diffDays > 0 ? `${diffSinceStart.diffDays} pvä, ` : "";
-
-      const sinceStartStr = `Hauskaa pidetty ${sinceStartDayPart}${diffSinceStart.diffHours
-        .toString()
-        .padStart(2, "0")}:${diffSinceStart.diffMinutes
-        .toString()
-        .padStart(2, "0")}:${diffSinceStart.diffSeconds
-        .toString()
-        .padStart(2, "0")}`;
-
-      const toEndDayPart =
-        diffToEnd.diffDays > 0 ? `${diffToEnd.diffDays} pvä, ` : "";
-
-      const toEndStr = `Hauskaa jäljellä ${toEndDayPart}${diffToEnd.diffHours
-        .toString()
-        .padStart(2, "0")}:${diffToEnd.diffMinutes
-        .toString()
-        .padStart(
-          2,
-          "0",
-        )}:${diffToEnd.diffSeconds.toString().padStart(2, "0")}`;
-
-      const wholeStr = `${sinceStartStr}<br>${toEndStr}`;
-
-      dayCounterEl.innerHTML = wholeStr;
-    }, 1000); // Update every second
+    setUpCountdown();
   </script>
 </section>
 
